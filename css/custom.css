@@ -1,0 +1,96 @@
+/*    Eugene Fenko | Copyright 2017   */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=cyrillic-ext'); 
+/* font-family: 'Roboto', sans-serif;  */
+
+
+/* RESET  */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* MAIN  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a,a:hover,a:link,a:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* HEADER  */
+
+
+
+header {
+    height: 100vh;
+    background: #ccc;
+    padding: 0 !important;
+}
+
+#particle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute !important;
+    z-index: 0;
+}
+
+#logo-text {
+    position: relative;
+    color: #eee;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.txt-rotate {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.head-btn {
+    background: #ef6c00;
+    z-index: 1;
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+}
+
+.head-btn:hover{
+    background: #ff9800;
+}
+
+
+/* CONTENT  */
+.content {
+    min-height: 80vh;
+    background: #ebeff1;
+}
+
+.content-block {
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+}
+/* FOOTER  */
+
+footer {
+    min-height: 20vh;
+    background: #333;
+}
+
