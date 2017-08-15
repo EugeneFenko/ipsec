@@ -74,7 +74,7 @@ window.onload = function() {
 
 var canvasDiv = document.getElementById('particle');
 var options = {
-  particleColor: '#aaa',
+  particleColor: '#ccc',
   background: '#2856b6',
   interactive: true,
   speed: 'low',
@@ -102,3 +102,4 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
 
 
 // Accordion
+$('#phase1').show();

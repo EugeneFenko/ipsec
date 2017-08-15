@@ -17,7 +17,7 @@ body {
 }
 
 a,a:hover,a:link,a:visited {
-    color: white !important;
+    color: #333;
     text-decoration: none !important;
 }
 
@@ -31,6 +31,23 @@ a,a:hover,a:link,a:visited {
     padding: 20px;
     margin: 10px;
     cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.row > div {
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
 }
 
 /* HEADER  */
@@ -66,7 +83,7 @@ header {
 .head-btn {
     background: #ef6c00;
     z-index: 1;
-    color: white;
+    color: white !important;
     position: absolute;
     bottom: 3rem;
 }
@@ -87,6 +104,17 @@ header {
     padding: 10px;
     margin: 10px auto;
 }
+
+#result_tarea {
+    width: 100%;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+#result {
+    text-align: center;
+}
+
 /* FOOTER  */
 
 footer {

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Smart IPsec</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -26,7 +26,7 @@
             </span>
         </h1>
 
-        <a href="#go" class=" head-btn btn">Create NOW!</a>
+        <a href="#go" class="head-btn btn">Create NOW!</a>
 
     </header>
 
@@ -36,22 +36,302 @@
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
-                            <h3>Step1: Choose type</h3>
+                            <h3>1 phase: ISAKMP setting</h3>
+                            <hr>
                         </div>
-                        <div class="col">
-                            <h4>Tunnel</h4>
+                        <div id="phase1" class="col-12">
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <h4>Hash:</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>md5</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>sha</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <h4>Encryption:</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>DES</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>3DES</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>AES</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <h4>Bit keys:</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>128</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>192</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>256</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <h4>Group:</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>1</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>2</h4>
+                                </div>
+                                <div class="col center circle">
+                                    <h4>5</h4>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-2">
+                                    <h4>Lifetime:</h4>
+                                </div>
+                                <div class="col-12 col-md-2">
+                                    <input type="number" name="" value="" placeholder="60-86400">
+                                </div>
+                          
+                                <div class="col-12 col-md-5">
+                                    <h4>IP destination router:</h4>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <input type="text" name="" value="" placeholder="192.168.0.1">
+                                </div>
+                        
+                                <div class="col-12 col-md-2">
+                                    <h4>Key:</h4>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <input type="password" name="" value="" placeholder="Str0nG_pAssWoRd">
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="col">
-                            <h4>Transport</h4>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12" style="display:none;">
+                <div class="container content-block">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h3>2 phase:</h3>
+                            <hr>
+                        </div>
+                        <div id="phase2" class="col-12">
+
+                            <div class="col-12">
+                                <h3>Access-list setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>ACL-number:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="" value="" placeholder="100-199">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Source network:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="192.168.0.0">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="0.0.0.255">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Destination network:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="192.168.1.0">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="0.0.0.255">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <h3>IPsec setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Transform-set:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="Name">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Mode:</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>tunnel</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>transport</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-3">
+                                    <h4>Type:</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>AH</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>ESP</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>ESP/AH</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <!-- ah-md5-hmac   AH-HMAC-MD5 transform
+                                     ah-sha-hmac   AH-HMAC-SHA transform -->
+                                <div class="col-3">
+                                    <h4>AH:</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>md5</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>sha</h4>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <!--esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
+                                    esp-aes       ESP transform using AES cipher
+                                    esp-des       ESP transform using DES cipher (56 bits)
+                                    esp-md5-hmac  ESP transform using HMAC-MD5 auth
+                                    esp-sha-hmac  ESP transform using HMAC-SHA auth  -->
+                                <div class="col-3">
+                                    <h4>ESP:</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>DES</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>3DES</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>AES</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>md5</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>sha</h4>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12">
+                                <h3>Crypto-map setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Name/Number:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="NAME">
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="" value="" placeholder="1-65535">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <h3>Interface setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <h4>Interface:</h4>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="" value="" placeholder="fa0/0">
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12">
-                <div class="container content-block">2 phase</div>
-            </div>
 
+            <div class="col-12">
+                <div class="container content-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Result:</h3>
+                            <hr>
+                        </div>
+                        <div id="result" class="col-12">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <h4>Text setting</h4>
+                                    <hr>
+                                    <input type="textarea" row="2" disabled name="" id="result_tarea" value="enable
+                                     configure terminal">
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <h4>Download settings file</h4>
+                                    <hr>
+                                    <button type="button">Download</button>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <h4>QR code setting</h4>
+                                    <hr>
+                                    <img src="qr.svg" alt="result">
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
