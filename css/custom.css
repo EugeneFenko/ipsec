@@ -12,7 +12,7 @@
 /* MAIN  */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-size: 16px;
 }
 
@@ -27,19 +27,91 @@ a,a:hover,a:link,a:visited {
     align-items: center;
 }
 
+
+/* BUTTONS  */
 .btn {
-    padding: 20px;
-    margin: 10px;
-    cursor: pointer;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 5px 0;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+/* BUTTONS  */
+
+/*COLORS  */
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
+
+.green {
+  background-color: #2ecc71;
+  box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+.green:hover {
+  background-color: #48E68B;
+}
+
+.red {
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+.red:hover {
+  background-color: #FF6656;
+}
+
+.purple {
+  background-color: #9b59b6;
+  box-shadow: 0px 5px 0px 0px #82409D;
+}
+
+.purple:hover {
+  background-color: #B573D0;
+}
+
+.orange {
+  background-color: #e67e22;
+  box-shadow: 0px 5px 0px 0px #CD6509;
+}
+
+.orange:hover {
+  background-color: #FF983C;
+}
+
+.yellow {
+  background-color: #f1c40f;
+  box-shadow: 0px 5px 0px 0px #D8AB00;
+}
+
+.yellow:hover {
+  background-color: #FFDE29;
+}
+/*COLORS  */
+
 
 .center {
     text-align: center;
 }
 
 .circle {
-    border-radius: 50%;
-    border: 1px solid #333;
+    
 }
 
 .row > div {
@@ -48,7 +120,62 @@ a,a:hover,a:link,a:visited {
 
 input {
     width: 100%;
+    border-bottom: 2px solid #aaa;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 8px;
 }
+
+
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid greenyellow;
+}
+
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+
+.name-l {
+    color: #444;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.check-b {
+    color: #666;
+}
+
+.check-b > span {
+    padding: 10px 20px;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.bord-b {
+    border-bottom: 1px dashed #ccc;
+    margin: 0 -10px;
+}
+
+.bord-b:hover {
+    border-bottom: 1px dashed #8bc34a;
+}
+
+
+
+
+
+
+
+
 
 /* HEADER  */
 
@@ -81,16 +208,12 @@ header {
 }
 
 .head-btn {
-    background: #ef6c00;
     z-index: 1;
     color: white !important;
     position: absolute;
     bottom: 3rem;
 }
 
-.head-btn:hover{
-    background: #ff9800;
-}
 
 
 /* CONTENT  */

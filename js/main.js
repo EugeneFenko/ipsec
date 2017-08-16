@@ -100,6 +100,12 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
     });
     
 
+//////////////////////
+//////CONF-GEN////////
+//////////////////////
 
-// Accordion
-$('#phase1').show();
+
+
+  
+ 
+    
