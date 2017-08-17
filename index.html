@@ -26,7 +26,7 @@
             </span>
         </h1>
 
-        <a href="#go" class="head-btn btn">Create NOW!</a>
+        <a href="#go" class="head-btn green btn">Create NOW!</a>
 
     </header>
 
@@ -36,87 +36,92 @@
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
-                            <h3>1 phase: ISAKMP setting</h3>
+                            <h3 class="name-l"><b>1 phase: ISAKMP</b></h3>
                             <hr>
                         </div>
                         <div id="phase1" class="col-12">
-                            <div class="row">
+                            <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
-                                    <h4>Hash:</h4>
+                                
+                                        <span class="name-l">Hash:</span>
+                                                                       
                                 </div>
                                 <div class="col center circle">
-                                    <h4>md5</h4>
+                                    
+                                        <span id="p1-md5" class="btn blue hash-conf-btn">md5</span>
+                                                                     
                                 </div>
                                 <div class="col center circle">
-                                    <h4>sha</h4>
+                                    
+                                        <span id="p1-sha" class="btn blue blue hash-conf-btn">sha</span>
+                                    
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
-                                    <h4>Encryption:</h4>
+                                    <span class="name-l">Encryption:</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>DES</h4>
+                                    <span id="p1-des" class="btn blue enc-conf-btn">DES</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>3DES</h4>
+                                    <span id="p1-3des" class="btn blue enc-conf-btn">3DES</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>AES</h4>
+                                    <span id="p1-aes" class="btn blue enc-conf-btn">AES</span>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
-                                    <h4>Bit keys:</h4>
+                                    <span class="name-l">Bit keys:</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>128</h4>
+                                    <span id="p1-aes-128" class="btn blue bit-conf-btn">128</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>192</h4>
+                                    <span id="p1-aes-192" class="btn blue bit-conf-btn">192</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>256</h4>
+                                    <span id="p1-aes-256" class="btn blue bit-conf-btn">256</span>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
-                                    <h4>Group:</h4>
+                                    <span class="name-l">Group:</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>1</h4>
+                                    <span class="btn blue">1</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>2</h4>
+                                    <span class="btn blue">2</span>
                                 </div>
                                 <div class="col center circle">
-                                    <h4>5</h4>
+                                    <span class="btn blue">5</span>
                                 </div>
                             </div>
 
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-2">
-                                    <h4>Lifetime:</h4>
-                                </div>
-                                <div class="col-12 col-md-2">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4 center">
+                                    <span class="name-l">Lifetime:</span>
+                        
                                     <input type="number" name="" value="" placeholder="60-86400">
                                 </div>
                           
-                                <div class="col-12 col-md-5">
-                                    <h4>IP destination router:</h4>
-                                </div>
-                                <div class="col-12 col-md-3">
+                                <div class="col-12 col-md-4 center">
+                                    <span class="name-l">IP destination router:</span>
+                             
                                     <input type="text" name="" value="" placeholder="192.168.0.1">
                                 </div>
                         
-                                <div class="col-12 col-md-2">
-                                    <h4>Key:</h4>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <input type="password" name="" value="" placeholder="Str0nG_pAssWoRd">
+                                <div class="col-12 col-md-4 center">
+                                    <span class="name-l">Key:</span>
+                    
+                                     <input type="password" name="" value="" placeholder="Str0nG_pAssWoRd"> 
+                                 
+                        
                                 </div>
                             </div>
 
@@ -143,7 +148,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>ACL-number:</h4>
+                                    <span>ACL-number:</span>
                                 </div>
                                 <div class="col">
                                     <input type="number" name="" value="" placeholder="100-199">
@@ -152,7 +157,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Source network:</h4>
+                                    <span>Source network:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="" value="" placeholder="192.168.0.0">
@@ -164,7 +169,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Destination network:</h4>
+                                    <span>Destination network:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="" value="" placeholder="192.168.1.0">
@@ -181,7 +186,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Transform-set:</h4>
+                                    <span>Transform-set:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="" value="" placeholder="Name">
@@ -190,29 +195,29 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Mode:</h4>
+                                    <span>Mode:</span>
                                 </div>
                                 <div class="col">
-                                    <h4>tunnel</h4>
+                                    <span>tunnel</span>
                                 </div>
                                 <div class="col">
-                                    <h4>transport</h4>
+                                    <span>transport</span>
                                 </div>
                             </div>
 
                             <div class="row">
 
                                 <div class="col-3">
-                                    <h4>Type:</h4>
+                                    <span>Type:</span>
                                 </div>
                                 <div class="col">
-                                    <h4>AH</h4>
+                                    <span>AH</span>
                                 </div>
                                 <div class="col">
-                                    <h4>ESP</h4>
+                                    <span>ESP</span>
                                 </div>
                                 <div class="col">
-                                    <h4>ESP/AH</h4>
+                                    <span>ESP/AH</span>
                                 </div>
                             </div>
 
@@ -221,13 +226,13 @@
                                 <!-- ah-md5-hmac   AH-HMAC-MD5 transform
                                      ah-sha-hmac   AH-HMAC-SHA transform -->
                                 <div class="col-3">
-                                    <h4>AH:</h4>
+                                    <span>AH:</span>
                                 </div>
                                 <div class="col">
-                                    <h4>md5</h4>
+                                    <span>md5</span>
                                 </div>
                                 <div class="col">
-                                    <h4>sha</h4>
+                                    <span>sha</span>
                                 </div>
                             </div>
 
@@ -239,22 +244,22 @@
                                     esp-md5-hmac  ESP transform using HMAC-MD5 auth
                                     esp-sha-hmac  ESP transform using HMAC-SHA auth  -->
                                 <div class="col-3">
-                                    <h4>ESP:</h4>
+                                    <span>ESP:</span>
                                 </div>
                                 <div class="col">
-                                    <h4>DES</h4>
+                                    <span>DES</span>
                                 </div>
                                 <div class="col">
-                                    <h4>3DES</h4>
+                                    <span>3DES</span>
                                 </div>
                                 <div class="col">
-                                    <h4>AES</h4>
+                                    <span>AES</span>
                                 </div>
                                 <div class="col">
-                                    <h4>md5</h4>
+                                    <span>md5</span>
                                 </div>
                                 <div class="col">
-                                    <h4>sha</h4>
+                                    <span>sha</span>
                                 </div>
                             </div>
 
@@ -267,7 +272,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Name/Number:</h4>
+                                    <span>Name/Number:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="" value="" placeholder="NAME">
@@ -285,7 +290,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <h4>Interface:</h4>
+                                    <span>Interface:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="" value="" placeholder="fa0/0">
@@ -304,24 +309,26 @@
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
-                            <h3>Result:</h3>
+                            <h3 class="name-l">Result:</h3>
                             <hr>
                         </div>
                         <div id="result" class="col-12">
                             <div class="row">
                                 <div class="col-sm-12 col-md-4">
-                                    <h4>Text setting</h4>
+                                    <span class="name-l">Text setting</span>
                                     <hr>
-                                    <input type="textarea" row="2" disabled name="" id="result_tarea" value="enable
-                                     configure terminal">
+    
+                                    <textarea rows="8" disabled cols="24">#enable // example configure text &#013;&#010;#configure terminal
+                                    </textarea>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
-                                    <h4>Download settings file</h4>
+                                    <span class="name-l">Download settings file</span>
                                     <hr>
-                                    <button type="button">Download</button>
+                                    <div class="btn green">Download</div>
+                                    <p style="font-size: 1rem; margin: 15px;" >(Download config.txt file configuration)</p>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
-                                    <h4>QR code setting</h4>
+                                    <span class="name-l">QR code setting</span>
                                     <hr>
                                     <img src="qr.svg" alt="result">
                                 </div>
