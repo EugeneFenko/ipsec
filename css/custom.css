@@ -245,3 +245,11 @@ footer {
     background: #333;
 }
 
+/** CUSTOM **/
+.hash-input {
+    display: none;
+}
+.hash-input:checked + .hash-btn {
+    background-color: red;
+} 
+
