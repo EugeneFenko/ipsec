@@ -250,10 +250,15 @@ footer {
 }
 
 /** CUSTOM **/
-.hash-input {
+.conf-input {
     display: none;
 }
-.hash-input:checked + .hash-btn {
-    background-color: red;
+.conf-input:checked + .conf-btn {
+    background-color: #2ecc71;
+    box-shadow: 0px 5px 0px 0px #15B358;
 } 
+
+#lengthAes {
+    display: none;
+}
 
