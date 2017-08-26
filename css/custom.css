@@ -111,7 +111,11 @@ a,a:hover,a:link,a:visited {
 }
 
 .circle {
+<<<<<<< HEAD
+    border-radius: 50%;
+=======
     
+>>>>>>> 27422a9cc79318767209f612cbf095221a3218a8
 }
 
 .row > div {
