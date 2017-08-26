@@ -119,7 +119,7 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
     var inputs = Array.from(dataForm.elements);
     inputs.forEach(function (input) {
       if (input.value) {
-        if (input.checked === false) { return; }
+        if (input.checked === false && input.type != 'text' && input.type != 'number' && input.type != 'password') { return; }
         model[input.name] = input.value;
       }
     });
@@ -137,9 +137,22 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
       model.nextRouterAddress + '\n';
   }
 
+
+  function togleLengthAes() {
+    if (this.value == 'aes') {
+      $('#lengthAes').show(1000);
+    }
+    else {
+      $('#lengthAes').hide(1000);
+    }
+  }
+
   function openNextPhase() {
 
   }
 
+  $('#p1-aes').click(togleLengthAes);
+  $('#p1-des').click(togleLengthAes);
+  $('#p1-3des').click(togleLengthAes);
   $('#result-btn').click(getResult);
 })();
