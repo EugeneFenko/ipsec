@@ -42,20 +42,20 @@
                         <div class="col-12">
                             <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
-                                
-                                        <span class="name-l">Hash:</span>
-                                                                       
+
+                                    <span class="name-l">Hash:</span>
+
                                 </div>
                                 <div class="col center circle">
                                     <label>
-                                        <input type="radio" name="hash" id="p1-md5" class="hash-input" value="md5">
-                                        <span class="btn blue hash-btn">md5</span>
+                                        <input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
+                                        <span class="btn blue conf-btn">md5</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
-                                        <input type="radio" name="hash" id="p1-sha" class="hash-input" value="sha1">
-                                        <span class="btn blue hash-btn">sha1</span> 
+                                        <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha1">
+                                        <span class="btn blue conf-btn">sha1</span> 
                                     </label>
                                 </div>
                             </div>
@@ -65,65 +65,94 @@
                                     <span class="name-l">Encryption:</span>
                                 </div>
                                 <div class="col center circle">
-                                    <span id="p1-des" class="btn blue enc-conf-btn">DES</span>
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
+                                        <span  class="btn blue conf-btn">DES</span>
+                                    </label>
                                 </div>
                                 <div class="col center circle">
-                                    <span id="p1-3des" class="btn blue enc-conf-btn">3DES</span>
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
+                                        <span  class="btn blue conf-btn">3DES</span>
+                                    </label>
                                 </div>
                                 <div class="col center circle">
-                                    <span id="p1-aes" class="btn blue enc-conf-btn">AES</span>
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
+                                        <span  class="btn blue conf-btn">AES</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="lengthAes">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Bit keys:</span>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                        <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
+                                        <span  class="btn blue conf-btn">128</span>
+                                    </label>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                        <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
+                                        <span  class="btn blue conf-btn">192</span>
+                                    </label>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                        <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
+                                        <span  class="btn blue conf-btn">256</span>
+                                    </label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="row bord-b align-items-center">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Bit keys:</span>
-                                </div>
-                                <div class="col center circle">
-                                    <span id="p1-aes-128" class="btn blue bit-conf-btn">128</span>
-                                </div>
-                                <div class="col center circle">
-                                    <span id="p1-aes-192" class="btn blue bit-conf-btn">192</span>
-                                </div>
-                                <div class="col center circle">
-                                    <span id="p1-aes-256" class="btn blue bit-conf-btn">256</span>
-                                </div>
-                            </div>
 
                             <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
                                     <span class="name-l">Group:</span>
                                 </div>
                                 <div class="col center circle">
-                                    <span class="btn blue">1</span>
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
+                                        <span  class="btn blue conf-btn">1</span>
+                                    </label>
                                 </div>
                                 <div class="col center circle">
-                                    <span class="btn blue">2</span>
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
+                                        <span  class="btn blue conf-btn">2</span>
+                                    </label>
                                 </div>
                                 <div class="col center circle">
-                                    <span class="btn blue">5</span>
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
+                                        <span  class="btn blue conf-btn">5</span>
+                                    </label>
                                 </div>
                             </div>
 
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-4 center">
                                     <span class="name-l">Lifetime:</span>
-                        
+
                                     <input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
                                 </div>
-                          
+
                                 <div class="col-12 col-md-4 center">
                                     <span class="name-l">IP destination router:</span>
-                             
+
                                     <input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
                                 </div>
-                        
+
                                 <div class="col-12 col-md-4 center">
                                     <span class="name-l">Key:</span>
-                    
-                                     <input type="password" name="key" placeholder="Str0nG_pAssWoRd"> 
-                                 
-                        
+
+                                    <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
+
+
                                 </div>
                             </div>
 
@@ -300,7 +329,7 @@
                                 </div>
                             </div>
 
-                        <input type="button" id="result-btn" value="Result">
+                            <input type="button" id="result-btn" value="Result">
 
                         </div>
                     </div>
@@ -320,7 +349,7 @@
                                 <div class="col-sm-12 col-md-4">
                                     <span class="name-l">Text setting</span>
                                     <hr>
-    
+
                                     <textarea id="result-output" rows="8" cols="24">#enable // example configure text &#013;&#010;#configure terminal
                                     </textarea>
                                 </div>
@@ -328,7 +357,7 @@
                                     <span class="name-l">Download settings file</span>
                                     <hr>
                                     <div class="btn green">Download</div>
-                                    <p style="font-size: 1rem; margin: 15px;" >(Download config.txt file configuration)</p>
+                                    <p style="font-size: 1rem; margin: 15px;">(Download config.txt file configuration)</p>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
                                     <span class="name-l">QR code setting</span>
