@@ -275,3 +275,7 @@ footer {
     display: inline-block !important;
     text-align: center;
 }
+
+#AH, #ESP {
+    display: none;
+}
