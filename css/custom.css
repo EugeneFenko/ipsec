@@ -262,3 +262,16 @@ footer {
     display: none;
 }
 
+#phase2 {
+    display: none;
+}
+
+#show-1phase-btn {
+    display: none;
+}
+
+
+#qr > img {
+    display: inline-block !important;
+    text-align: center;
+}
