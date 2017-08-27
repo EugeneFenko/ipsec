@@ -39,7 +39,7 @@
                             <h3 class="name-l"><b>1 phase: ISAKMP</b></h3>
                             <hr>
                         </div>
-                        <div class="col-12">
+                        <div id="phase1" class="col-12">
                             <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3">
 
@@ -156,9 +156,9 @@
                                 </div>
                             </div>
 
-                            <input type="button" value="Next phase">
+                            <input type="button" id="next-phase-btn" value="Next phase">
                         </div>
-
+                        <input type='button' value="Show" class="btn orange" name="click" id="show-1phase-btn">
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                                     <span>ACL-number:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="number" name="" value="" placeholder="100-199">
+                                    <input type="number" name="numberAcl" value="" placeholder="100-199">
                                 </div>
                             </div>
 
@@ -192,10 +192,10 @@
                                     <span>Source network:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="192.168.0.0">
+                                    <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="0.0.0.255">
+                                    <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
                                 </div>
                             </div>
 
@@ -204,10 +204,10 @@
                                     <span>Destination network:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="192.168.1.0">
+                                    <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="0.0.0.255">
+                                    <input type="text" name="destMask" value="" placeholder="0.0.0.255">
                                 </div>
                             </div>
 
@@ -221,11 +221,11 @@
                                     <span>Transform-set:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="Name">
+                                    <input type="text" name="transformName" value="" placeholder="Name">
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-3">
                                     <span>Mode:</span>
                                 </div>
@@ -235,7 +235,7 @@
                                 <div class="col">
                                     <span>transport</span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="row">
 
@@ -243,13 +243,13 @@
                                     <span>Type:</span>
                                 </div>
                                 <div class="col">
-                                    <span>AH</span>
+                                    <span class="blue btn">AH</span>
                                 </div>
                                 <div class="col">
-                                    <span>ESP</span>
+                                    <span class="blue btn">ESP</span>
                                 </div>
                                 <div class="col">
-                                    <span>ESP/AH</span>
+                                    <span class="blue btn">ESP/AH</span>
                                 </div>
                             </div>
 
@@ -261,10 +261,16 @@
                                     <span>AH:</span>
                                 </div>
                                 <div class="col">
-                                    <span>md5</span>
+                                    <label>
+                                        <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
+                                        <span class="btn blue conf-btn">md5</span>
+                                    </label>
                                 </div>
                                 <div class="col">
-                                    <span>sha</span>
+                                    <label>
+                                        <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
+                                        <span class="btn blue conf-btn">sha</span>
+                                    </label>
                                 </div>
                             </div>
 
@@ -279,19 +285,34 @@
                                     <span>ESP:</span>
                                 </div>
                                 <div class="col">
-                                    <span>DES</span>
+                                    <label>
+                                        <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
+                                        <span class="btn blue conf-btn">DES</span>
+                                    </label>
                                 </div>
                                 <div class="col">
-                                    <span>3DES</span>
+                                    <label>
+                                        <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
+                                        <span class="btn blue conf-btn">3DES</span>
+                                    </label>
                                 </div>
                                 <div class="col">
-                                    <span>AES</span>
+                                    <label>
+                                        <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
+                                        <span class="btn blue conf-btn">AES</span>
+                                    </label>
                                 </div>
                                 <div class="col">
-                                    <span>md5</span>
+                                    <label>
+                                        <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
+                                        <span class="btn blue conf-btn">MD5</span>
+                                    </label>
                                 </div>
                                 <div class="col">
-                                    <span>sha</span>
+                                    <label>
+                                        <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
+                                        <span class="btn blue conf-btn">SHA</span>
+                                    </label>
                                 </div>
                             </div>
 
@@ -307,10 +328,10 @@
                                     <span>Name/Number:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="NAME">
+                                    <input type="text" name="mapName" value="" placeholder="NAME">
                                 </div>
                                 <div class="col">
-                                    <input type="number" name="" value="" placeholder="1-65535">
+                                    <input type="number" name="mapNumber" value="" placeholder="1-65535">
                                 </div>
                             </div>
 
@@ -325,7 +346,7 @@
                                     <span>Interface:</span>
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="" value="" placeholder="fa0/0">
+                                    <input type="text" name="interfaceName" value="" placeholder="fa0/0">
                                 </div>
                             </div>
 
@@ -356,13 +377,13 @@
                                 <div class="col-sm-12 col-md-4">
                                     <span class="name-l">Download settings file</span>
                                     <hr>
-                                    <div class="btn green">Download</div>
+                                    <div id="downBtn" class="btn green">Download</div>
                                     <p style="font-size: 1rem; margin: 15px;">(Download config.txt file configuration)</p>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
                                     <span class="name-l">QR code setting</span>
                                     <hr>
-                                    <img src="qr.svg" alt="result">
+                                    <div id="qr"></div>
                                 </div>
                             </div>
                         </div>
@@ -382,6 +403,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
