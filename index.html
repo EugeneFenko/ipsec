@@ -243,116 +243,129 @@
                                     <span>Type:</span>
                                 </div>
                                 <div class="col">
-                                    <span class="blue btn">AH</span>
-                                </div>
-                                <div class="col">
-                                    <span class="blue btn">ESP</span>
-                                </div>
-                                <div class="col">
-                                    <span class="blue btn">ESP/AH</span>
-                                </div>
-                            </div>
-
-                            <div class="row">
-
-                                <!-- ah-md5-hmac   AH-HMAC-MD5 transform
-                                     ah-sha-hmac   AH-HMAC-SHA transform -->
-                                <div class="col-3">
-                                    <span>AH:</span>
+                                    <label>
+                                        <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH</span>
+                                    </label>
                                 </div>
                                 <div class="col">
                                     <label>
+                                        <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">ESP</span>
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <label>
+                                        <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH/ESP</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="AH">
+                                <div class="row">
+
+                                    <!-- ah-md5-hmac   AH-HMAC-MD5 transform
+                                     ah-sha-hmac   AH-HMAC-SHA transform -->
+                                    <div class="col-3">
+                                        <span>AH:</span>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
                                         <span class="btn blue conf-btn">md5</span>
                                     </label>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
                                         <span class="btn blue conf-btn">sha</span>
                                     </label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div id="ESP">
+                                <div class="row">
 
-                                <!--esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
+                                    <!--esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
                                     esp-aes       ESP transform using AES cipher
                                     esp-des       ESP transform using DES cipher (56 bits)
                                     esp-md5-hmac  ESP transform using HMAC-MD5 auth
                                     esp-sha-hmac  ESP transform using HMAC-SHA auth  -->
-                                <div class="col-3">
-                                    <span>ESP:</span>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    <div class="col-3">
+                                        <span>ESP:</span>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
                                         <span class="btn blue conf-btn">DES</span>
                                     </label>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
                                         <span class="btn blue conf-btn">3DES</span>
                                     </label>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
                                         <span class="btn blue conf-btn">AES</span>
                                     </label>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
                                         <span class="btn blue conf-btn">MD5</span>
                                     </label>
-                                </div>
-                                <div class="col">
-                                    <label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
                                         <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
                                         <span class="btn blue conf-btn">SHA</span>
                                     </label>
+                                    </div>
                                 </div>
                             </div>
 
 
-
-                            <div class="col-12">
-                                <h3>Crypto-map setting</h3>
-                                <hr>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <span>Name/Number:</span>
+                                <div class="col-12">
+                                    <h3>Crypto-map setting</h3>
+                                    <hr>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="mapName" value="" placeholder="NAME">
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <span>Name/Number:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="mapName" value="" placeholder="NAME">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" name="mapNumber" value="" placeholder="1-65535">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="number" name="mapNumber" value="" placeholder="1-65535">
+
+
+                                <div class="col-12">
+                                    <h3>Interface setting</h3>
+                                    <hr>
                                 </div>
-                            </div>
 
-
-                            <div class="col-12">
-                                <h3>Interface setting</h3>
-                                <hr>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <span>Interface:</span>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <span>Interface:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="interfaceName" value="" placeholder="fa0/0">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="interfaceName" value="" placeholder="fa0/0">
-                                </div>
-                            </div>
 
-                            <input type="button" id="result-btn" value="Result">
+                                <input type="button" id="result-btn" value="Result">
 
+                            
                         </div>
+
                     </div>
                 </div>
             </div>
