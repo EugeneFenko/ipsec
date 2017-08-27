@@ -151,7 +151,8 @@ var outputConfig;
     });
 
      if($('#lengthAes').css('display') == 'none'){model.keyLength=''};
-
+     if($('#AH').css('display') == 'none'){model.hashAH=''};
+     if($('#ESP').css('display') == 'none'){model.encESP='', model.hashESP=''};
     
     
     outputConfig = 'crypto isakmp policy 1\r\n' +
@@ -198,13 +199,32 @@ var outputConfig;
     $('#phase1').show(1000);
   }
 
+  function ipsecMode() {
+    if (this.id == 'ahBtn') {
+      $('#AH').show(1000);
+      $('#ESP').hide(1000);
+    }
+    else if (this.id == 'espBtn') {
+      $('#ESP').show(1000);
+      $('#AH').hide(1000);
+    } else {
+      $('#ESP').show(1000);
+      $('#AH').show(1000);
+    }
+  }
+ 
+  //AES_BIT_show/hide
   $('#p1-aes').click(togleLengthAes);
   $('#p1-des').click(togleLengthAes);
   $('#p1-3des').click(togleLengthAes);
-
+  //IPSec_mode
+  $('#ahBtn').click(ipsecMode);
+  $('#espBtn').click(ipsecMode);
+  $('#ahEspBtn').click(ipsecMode);
+  //Phase_show/hide
   $('#next-phase-btn').click(openNextPhase);
   $('#show-1phase-btn').click(showOnePhase);
-
+  //GET_result
   $('#result-btn').click(getResult);
 
    
@@ -243,7 +263,7 @@ function destroyClickedElement(event) {
 }
 
 
-
+///QR_code
 var qrcode = new QRCode("qr", {
   text: "Smart IPsec",
   width: 300,
