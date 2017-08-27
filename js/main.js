@@ -103,17 +103,43 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
 //////////////////////
 //////CONF-GEN////////
 //////////////////////
+
+var outputConfig;
+
+
 (function () {
+
   function getResult() {
     var dataForm = document.querySelector('#data-form');
     var model = {
+      //1phase
       hash: '',
       encryption: '',
       group: '',
       keyLength: '',
       lifeTime: '',
       nextRouterAddress: '',
-      key: ''
+      key: '',
+
+      //2phase
+
+      //ACL
+      numberAcl: '',
+      sourceAddress: '',
+      sourceMask: '',
+      destAddress: '',
+      destMask: '',
+      //IPSEC
+      transformName: '',
+      //AH
+      hashAH: '',
+      //ESP
+      encESP: '',
+      hashESP: '',
+      //CryptoMap
+      mapName: '',
+      mapNumber: '',
+      interfaceName: ''
     };
 
     var inputs = Array.from(dataForm.elements);
@@ -124,17 +150,29 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
       }
     });
 
-    var resultContainer = document.querySelector('#result-output');
-    resultContainer.textContent = 'crypto isakmp policy 1\n' +
-      'authentication pre-share\n' +
-      'hash ' + model.hash + '\n' +
+     if($('#lengthAes').css('display') == 'none'){model.keyLength=''};
+
+    
+    
+    outputConfig = 'crypto isakmp policy 1\r\n' +
+      'authentication pre-share\r\n' +
+      'hash ' + model.hash + '\r\n' +
       'encryption ' + model.encryption + ' ' +
-      model.keyLength + '\n' +
-      'group ' + model.group + '\n' +
-      'lifetime ' + model.lifeTime + '\n' +
-      'exit\n' +
+      model.keyLength + '\r\n' +
+      'group ' + model.group + '\r\n' +
+      'lifetime ' + model.lifeTime + '\r\n' +
+      'exit\r\n' +
       'crypto isakmp key ' + model.key + ' address ' +
-      model.nextRouterAddress + '\n';
+      model.nextRouterAddress + '\r\n\r\n' + 
+      'crypto ipsec transform-set ' + model.transformName + ' '+ model.hashAH+' '+ model.encESP+' '+ model.hashESP +'\r\n' + 
+      'access-list ' + model.numberAcl + ' permit ip '+model.sourceAddress+' '+model.sourceMask+' '+model.destAddress+' '+model.destMask+'\r\n\r\n' + 'crypto map ' + model.mapName + ' ' + model.mapNumber + ' ipsec-isakmp\r\n' + 'set peer '+model.nextRouterAddress+'\r\n'+'match address '+model.numberAcl+'\r\n'+'set transform-set '+model.transformName+'\r\nexit\r\n\r\n'+'interface '+model.interfaceName+'\r\n'+'crypto map '+model.mapName+'\r\n';
+      
+      
+      var resultContainer = document.querySelector('#result-output');
+      resultContainer.textContent = outputConfig;
+
+      qrcode.makeCode(outputConfig);
+     
   }
 
 
@@ -148,11 +186,70 @@ $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(
   }
 
   function openNextPhase() {
+    $('#phase2').show(1000);
+    $('#show-1phase-btn').show(100);
+    $('#phase1').hide(1000);
+    
+  }
 
+  function showOnePhase() {
+    $('#phase2').hide(1000);
+    $('#show-1phase-btn').hide(100);
+    $('#phase1').show(1000);
   }
 
   $('#p1-aes').click(togleLengthAes);
   $('#p1-des').click(togleLengthAes);
   $('#p1-3des').click(togleLengthAes);
+
+  $('#next-phase-btn').click(openNextPhase);
+  $('#show-1phase-btn').click(showOnePhase);
+
   $('#result-btn').click(getResult);
+
+   
 })();
+
+
+////SAVE_FILE////
+function saveTextAsFile() {
+  //var textToWrite = document.getElementById('result-output').textContent;
+  var textFileAsBlob = new Blob([ outputConfig ], { type: 'text/plain' });
+  var fileNameToSaveAs = "config.txt";
+
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  if (window.URL != null) {
+    // Chrome allows the link to be clicked without actually adding it to the DOM.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+  } else {
+    // Firefox requires the link to be added to the DOM before it can be clicked.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+  }
+
+  downloadLink.click();
+}
+
+var button = document.getElementById('downBtn');
+button.addEventListener('click', saveTextAsFile);
+
+function destroyClickedElement(event) {
+  // remove the link from the DOM
+  document.body.removeChild(event.target);
+}
+
+
+
+var qrcode = new QRCode("qr", {
+  text: "Smart IPsec",
+  width: 300,
+  height: 300,
+  colorDark : "#333",
+  colorLight : "#fff",
+  correctLevel : QRCode.CorrectLevel.H
+});
+
