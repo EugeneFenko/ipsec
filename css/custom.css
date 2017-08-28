@@ -31,7 +31,7 @@ a,a:hover,a:link,a:visited {
 /* BUTTONS  */
 .btn {
   border-radius: 5px;
-  padding: 15px 25px;
+  padding: 12px 20px;
   font-size: 22px;
   text-decoration: none;
   margin: 5px 0;
@@ -39,6 +39,12 @@ a,a:hover,a:link,a:visited {
   position: relative;
   display: inline-block;
   cursor: pointer;
+}
+
+@media(max-width: 424px) {
+    .btn {
+        padding: 5px 9px;
+      }
 }
 
 .btn:active {
@@ -111,11 +117,8 @@ a,a:hover,a:link,a:visited {
 }
 
 .circle {
-<<<<<<< HEAD
     border-radius: 50%;
-=======
     
->>>>>>> 27422a9cc79318767209f612cbf095221a3218a8
 }
 
 .row > div {
@@ -150,7 +153,7 @@ textarea {
 
 .name-l {
     color: #444;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 300;
 }
 
@@ -179,8 +182,6 @@ textarea {
 
 
 
-
-
 /* HEADER  */
 
 
@@ -192,9 +193,12 @@ header {
 }
 
 #particle {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    height: 100vh;
     position: absolute !important;
     z-index: 0;
 }
@@ -274,8 +278,28 @@ footer {
 #qr > img {
     display: inline-block !important;
     text-align: center;
+    width: 80%;
 }
 
+@media(max-width: 1023px){
+    #qr > img {
+        width: 100%;
+    }
+    
+}
 #AH, #ESP {
     display: none;
+}
+
+.mrg-top-50 {
+    margin-top: 50px;
+}
+
+#result-output {
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+#data-form {
+    text-align: center;
 }
