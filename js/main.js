@@ -265,9 +265,7 @@ function destroyClickedElement(event) {
 
 ///QR_code
 var qrcode = new QRCode("qr", {
-  text: "Smart IPsec",
-  width: 300,
-  height: 300,
+  text: "Eugene Fenko\neugenefenko.github.io",
   colorDark : "#333",
   colorLight : "#fff",
   correctLevel : QRCode.CorrectLevel.H
