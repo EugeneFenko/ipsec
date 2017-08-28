@@ -17,7 +17,7 @@ body {
 }
 
 a,a:hover,a:link,a:visited {
-    color: #333;
+    color: #fff;
     text-decoration: none !important;
 }
 
@@ -213,13 +213,6 @@ header {
 .txt-rotate {
     font-weight: 100;
     font-size: 2.5rem;
-}
-
-.head-btn {
-    z-index: 1;
-    color: white !important;
-    position: absolute;
-    bottom: 3rem;
 }
 
 
