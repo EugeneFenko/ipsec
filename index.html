@@ -36,7 +36,7 @@
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="name-l"><b>1 phase: ISAKMP</b></h3>
+                            <h3>First phase</h3>
                             <hr>
                         </div>
                         <div id="phase1" class="col-12">
@@ -155,11 +155,15 @@
 
                                 </div>
                             </div>
-
-                            <input type="button" id="next-phase-btn" value="Next phase">
+                            
+                            <div class="row no-gutters justify-content-center">
+                                <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" value="Next phase">                                
+                            </div>
                         </div>
-                        <input type='button' value="Show" class="btn orange" name="click" id="show-1phase-btn">
-                    </div>
+                        <div class="col-12 center" id="show-1phase-btn">
+                            <input type="button" value="Show" class="btn orange col-12 col-md-2" name="click">
+                        </div>                                                
+                    </div>      
                 </div>
             </div>
 
@@ -168,7 +172,7 @@
                     <div class="row">
 
                         <div class="col-12">
-                            <h3>2 phase:</h3>
+                            <h3>Second phase</h3>
                             <hr>
                         </div>
                         <div id="phase2" class="col-12">
@@ -179,8 +183,8 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-3">
-                                    <span>ACL-number:</span>
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">ACL-number:</span>
                                 </div>
                                 <div class="col">
                                     <input type="number" name="numberAcl" value="" placeholder="100-199">
@@ -188,8 +192,8 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-3">
-                                    <span>Source network:</span>
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Source network:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
@@ -200,8 +204,8 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-3">
-                                    <span>Destination network:</span>
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Destination network:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
@@ -211,71 +215,58 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 mrg-top-50">
                                 <h3>IPsec setting</h3>
                                 <hr>
                             </div>
 
                             <div class="row">
-                                <div class="col-3">
-                                    <span>Transform-set:</span>
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Transform-set:</span>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="transformName" value="" placeholder="Name">
                                 </div>
                             </div>
 
-                            <!-- <div class="row">
-                                <div class="col-3">
-                                    <span>Mode:</span>
-                                </div>
-                                <div class="col">
-                                    <span>tunnel</span>
-                                </div>
-                                <div class="col">
-                                    <span>transport</span>
-                                </div>
-                            </div> -->
+                          
+                            <div class="row justify-content-center">
 
-                            <div class="row">
-
-                                <div class="col-3">
-                                    <span>Type:</span>
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Type:</span>
                                 </div>
-                                <div class="col">
+                                <div class="col center">
                                     <label>
                                         <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">AH</span>
                                     </label>
                                 </div>
-                                <div class="col">
+                                <div class="col center">
                                     <label>
                                         <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">ESP</span>
                                     </label>
                                 </div>
-                                <div class="col">
+                                <div class="col center">
                                     <label>
                                         <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">AH/ESP</span>
                                     </label>
                                 </div>
                             </div>
-                            <div id="AH">
-                                <div class="row">
 
-                                    <!-- ah-md5-hmac   AH-HMAC-MD5 transform
-                                     ah-sha-hmac   AH-HMAC-SHA transform -->
-                                    <div class="col-3">
-                                        <span>AH:</span>
+                            <div id="AH">
+                                <div class="row bord-b">                                  
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">AH:</span>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
                                         <span class="btn blue conf-btn">md5</span>
                                     </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
                                         <span class="btn blue conf-btn">sha</span>
@@ -285,41 +276,35 @@
                             </div>
 
                             <div id="ESP">
-                                <div class="row">
-
-                                    <!--esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
-                                    esp-aes       ESP transform using AES cipher
-                                    esp-des       ESP transform using DES cipher (56 bits)
-                                    esp-md5-hmac  ESP transform using HMAC-MD5 auth
-                                    esp-sha-hmac  ESP transform using HMAC-SHA auth  -->
-                                    <div class="col-3">
-                                        <span>ESP:</span>
+                                <div class="row bord-b">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">ESP:</span>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
                                         <span class="btn blue conf-btn">DES</span>
                                     </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
                                         <span class="btn blue conf-btn">3DES</span>
                                     </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
                                         <span class="btn blue conf-btn">AES</span>
                                     </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center">
                                         <label>
                                         <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
                                         <span class="btn blue conf-btn">MD5</span>
                                     </label>
                                     </div>
-                                    <div class="col">
+                                    <div class="col center ">
                                         <label>
                                         <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
                                         <span class="btn blue conf-btn">SHA</span>
@@ -329,14 +314,14 @@
                             </div>
 
 
-                                <div class="col-12">
+                                <div class="col-12 mrg-top-50">
                                     <h3>Crypto-map setting</h3>
                                     <hr>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-3">
-                                        <span>Name/Number:</span>
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Name/Number:</span>
                                     </div>
                                     <div class="col">
                                         <input type="text" name="mapName" value="" placeholder="NAME">
@@ -347,21 +332,21 @@
                                 </div>
 
 
-                                <div class="col-12">
+                                <div class="col-12 mrg-top-50">
                                     <h3>Interface setting</h3>
                                     <hr>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-3">
-                                        <span>Interface:</span>
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Interface:</span>
                                     </div>
                                     <div class="col">
                                         <input type="text" name="interfaceName" value="" placeholder="fa0/0">
                                     </div>
                                 </div>
 
-                                <input type="button" id="result-btn" value="Result">
+                                <input type="button" class="btn green col-12 col-md-3" id="result-btn" value="Result">
 
                             
                         </div>
