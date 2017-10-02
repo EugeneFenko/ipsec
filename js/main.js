@@ -212,7 +212,19 @@ var outputConfig;
       $('#AH').show(1000);
     }
   }
- 
+
+  function showResBlock() {
+    $('.result-block').show(1000);
+  }
+  
+  function expMode() {
+    if(this.value == 'On') {
+      $('.infoBlock').css('display','block');
+    } 
+    if(this.value == 'Off') {
+      $('.infoBlock').css('display','none');
+    }
+  }
   //AES_BIT_show/hide
   $('#p1-aes').click(togleLengthAes);
   $('#p1-des').click(togleLengthAes);
@@ -226,8 +238,12 @@ var outputConfig;
   $('#show-1phase-btn').click(showOnePhase);
   //GET_result
   $('#result-btn').click(getResult);
+  $('#result-btn').click(showResBlock)
+  //OffHelp_(ExpertMode)
+  $('#btnExpertOn').click(expMode);
+  $('#btnExpertOff').click(expMode);
+  
 
-   
 })();
 
 
@@ -270,4 +286,5 @@ var qrcode = new QRCode("qr", {
   colorLight : "#fff",
   correctLevel : QRCode.CorrectLevel.H
 });
+
 

@@ -156,6 +156,7 @@ textarea {
     color: #444;
     font-size: 1.4rem;
     font-weight: 300;
+    cursor: help;
 }
 
 .check-b {
@@ -191,6 +192,7 @@ header {
     height: 100vh;
     background: #ccc;
     padding: 0 !important;
+    z-index: 20;
 }
 
 #particle {
@@ -238,6 +240,16 @@ header {
 
 #result {
     text-align: center;
+}
+
+.forInfo:hover > .infoBlock,  .row:hover > .infoBlock {
+    display: block;
+}
+
+.infoBlock {
+    display: none;
+    background: #444;
+    color: #fff;
 }
 
 /* FOOTER  */
@@ -296,4 +308,19 @@ footer {
 
 #data-form {
     text-align: center;
+}
+
+#btnExpert {
+    position: fixed;
+    color: black;
+    background: orange;
+    bottom: 50px;
+    right: 8px;
+    z-index: 10;
+}
+
+/* Result */
+
+.result-block{
+    display: none;
 }

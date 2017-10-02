@@ -18,21 +18,21 @@
 <body>
 
     <header class="container-fluid content-center">
-    <div id="particle" ></div>
-    <div class="row">
-        <div class="col-12">
-            <h1 id="logo-text">Smart IPsec<br>
-                <span class="txt-rotate" data-period="2000" data-rotate='[ "- it`s easy","- it`s fast", "- it`s pretty", "- it`s fun!" ]'>
+        <div id="particle"></div>
+        <div class="row">
+            <div class="col-12">
+                <h1 id="logo-text">Smart IPsec<br>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "- it`s easy","- it`s fast", "- it`s pretty", "- it`s fun!" ]'>
                 </span>
-            </h1>
-        </div>
-        <div class="col-12 center justify-content-end">
-            <a href="#go" class="green btn">Create NOW!</a>
+                </h1>
+            </div>
+            <div class="col-12 center justify-content-end">
+                <a href="#go" class="green btn">Create NOW!</a>
+            </div>
+
+
         </div>
 
-        
-    </div>        
-        
 
     </header>
 
@@ -42,7 +42,7 @@
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
-                            <h3>First phase</h3>
+                            <h3>I phase</h3>
                             <hr>
                         </div>
                         <div id="phase1" class="col-12">
@@ -63,6 +63,9 @@
                                         <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha1">
                                         <span class="btn blue conf-btn">sha1</span> 
                                     </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/Hash.</p>
                                 </div>
                             </div>
 
@@ -88,8 +91,11 @@
                                         <span  class="btn blue conf-btn">AES</span>
                                     </label>
                                 </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/Encr.</p>
+                                </div>
                             </div>
-                            <div id="lengthAes">
+                            <div class="row" id="lengthAes">
                                 <div class="row bord-b align-items-center">
                                     <div class="col-12 col-md-3">
                                         <span class="name-l">Bit keys:</span>
@@ -112,6 +118,9 @@
                                         <span  class="btn blue conf-btn">256</span>
                                     </label>
                                     </div>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/AES bit.</p>
                                 </div>
                             </div>
 
@@ -138,6 +147,9 @@
                                         <span  class="btn blue conf-btn">5</span>
                                     </label>
                                 </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/Groupe.</p>
+                                </div>
                             </div>
 
                             <div class="row align-items-center">
@@ -157,204 +169,221 @@
                                     <span class="name-l">Key:</span>
 
                                     <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
-
-
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/Text.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="row no-gutters justify-content-center">
-                                <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" value="Next phase">                                
+                                <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" value="Next phase">
                             </div>
                         </div>
                         <div class="col-12 center" id="show-1phase-btn">
                             <input type="button" value="Show" class="btn orange col-12 col-md-2" name="click">
-                        </div>                                                
-                    </div>      
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12" id="phase2">
                 <div class="container content-block">
                     <div class="row">
 
                         <div class="col-12">
-                            <h3>Second phase</h3>
+                            <h3>II phase</h3>
                             <hr>
                         </div>
-                        <div id="phase2" class="col-12">
+                        <div class="col-12">
 
                             <div class="col-12">
                                 <h3>Access-list setting</h3>
                                 <hr>
                             </div>
 
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">ACL-number:</span>
+                            <div class="forInfo">
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">ACL-number:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" name="numberAcl" value="" placeholder="100-199">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="number" name="numberAcl" value="" placeholder="100-199">
+
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Source network:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Destination network:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="destMask" value="" placeholder="0.0.0.255">
+                                    </div>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/ACL.</p>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Source network:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Destination network:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="destMask" value="" placeholder="0.0.0.255">
-                                </div>
-                            </div>
 
                             <div class="col-12 mrg-top-50">
                                 <h3>IPsec setting</h3>
                                 <hr>
                             </div>
+                            <div class="forInfo">
 
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Transform-set:</span>
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Transform-set:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="transformName" value="" placeholder="Name">
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" name="transformName" value="" placeholder="Name">
-                                </div>
-                            </div>
 
-                          
-                            <div class="row justify-content-center">
 
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Type:</span>
-                                </div>
-                                <div class="col center">
-                                    <label>
+                                <div class="row justify-content-center">
+
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Type:</span>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
                                         <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">AH</span>
                                     </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
                                         <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">ESP</span>
                                     </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
                                         <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
                                         <span class="btn blue conf-btn">AH/ESP</span>
                                     </label>
-                                </div>
-                            </div>
-
-                            <div id="AH">
-                                <div class="row bord-b">                                  
-                                    <div class="col-12 col-md-3">
-                                        <span class="name-l">AH:</span>
                                     </div>
-                                    <div class="col center">
-                                        <label>
+                                </div>
+
+                                <div id="AH">
+                                    <div class="row bord-b">
+                                        <div class="col-12 col-md-3">
+                                            <span class="name-l">AH:</span>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
                                         <span class="btn blue conf-btn">md5</span>
                                     </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
                                         <span class="btn blue conf-btn">sha</span>
                                     </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div id="ESP">
-                                <div class="row bord-b">
-                                    <div class="col-12 col-md-3">
-                                        <span class="name-l">ESP:</span>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
+                                <div id="ESP">
+                                    <div class="row bord-b">
+                                        <div class="col-12 col-md-3">
+                                            <span class="name-l">ESP:</span>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
                                         <span class="btn blue conf-btn">DES</span>
                                     </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
                                         <span class="btn blue conf-btn">3DES</span>
                                     </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
                                         <span class="btn blue conf-btn">AES</span>
                                     </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
+                                        </div>
+                                        <div class="col center">
+                                            <label>
                                         <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
                                         <span class="btn blue conf-btn">MD5</span>
                                     </label>
-                                    </div>
-                                    <div class="col center ">
-                                        <label>
+                                        </div>
+                                        <div class="col center ">
+                                            <label>
                                         <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
                                         <span class="btn blue conf-btn">SHA</span>
                                     </label>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/IPSec.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mrg-top-50">
+                                <h3>Crypto-map setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Name/Number:</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="mapName" value="" placeholder="NAME">
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="mapNumber" value="" placeholder="1-65535">
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/MAP.</p>
                                 </div>
                             </div>
 
 
-                                <div class="col-12 mrg-top-50">
-                                    <h3>Crypto-map setting</h3>
-                                    <hr>
+                            <div class="col-12 mrg-top-50">
+                                <h3>Interface setting</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Interface:</span>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-12 col-md-3">
-                                        <span class="name-l">Name/Number:</span>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" name="mapName" value="" placeholder="NAME">
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" name="mapNumber" value="" placeholder="1-65535">
-                                    </div>
+                                <div class="col">
+                                    <input type="text" name="interfaceName" value="" placeholder="fa0/0">
                                 </div>
-
-
-                                <div class="col-12 mrg-top-50">
-                                    <h3>Interface setting</h3>
-                                    <hr>
+                                <div class="col-12 infoBlock">
+                                    <p class="info">Help info/Int.</p>
                                 </div>
+                            </div>
 
-                                <div class="row">
-                                    <div class="col-12 col-md-3">
-                                        <span class="name-l">Interface:</span>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" name="interfaceName" value="" placeholder="fa0/0">
-                                    </div>
-                                </div>
+                            <input type="button" class="btn green col-12 col-md-3" id="result-btn" value="Result">
 
-                                <input type="button" class="btn green col-12 col-md-3" id="result-btn" value="Result">
 
-                            
                         </div>
 
                     </div>
@@ -362,7 +391,7 @@
             </div>
 
 
-            <div class="col-12">
+            <div class="col-12 result-block">
                 <div class="container content-block">
                     <div class="row">
                         <div class="col-12">
@@ -406,6 +435,14 @@
         </div>
     </footer>
 
+    <label>
+        <input type="radio" name="btnExpert" id="btnExpertOn" class="conf-input" value="On">
+        <span class="btn blue conf-btn">I</span>
+    </label>
+    <label>
+        <input type="radio" name="btnExpert" id="btnExpertOff" class="conf-input" value="Off">
+        <span class="btn blue conf-btn">O</span>
+    </label>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/qrcode.min.js"></script>
     <script src="js/main.js"></script>
