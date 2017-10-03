@@ -218,14 +218,11 @@ var outputConfig;
   }
   
   function expMode() {
-    // if($('#expI_O').prop('checked')) {
-      if(document.getElementById('expI_O').checked) {
-      // $('.forInfo').css('pointerEvents','all');
-      console.log('yes');
+    if($('#expI_O').prop('checked')) {
+      $('.forInfo').css('pointerEvents','all');
     }
     else {
-      // $('.forInfo').css('pointerEvents','none');
-      console.log('no');
+      $('.forInfo').css('pointerEvents','none');
     }
     
   }
@@ -244,7 +241,7 @@ var outputConfig;
   $('#result-btn').click(getResult);
   $('#result-btn').click(showResBlock)
   //OffHelp_(ExpertMode)
-  $('#btnExpert').click(expMode);
+  $('#expI_O').click(expMode);
   
 
 })();

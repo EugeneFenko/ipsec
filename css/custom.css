@@ -242,7 +242,7 @@ header {
     text-align: center;
 }
 
-.forInfo:hover > .infoBlock,  .row:hover > .infoBlock {
+.forInfo:hover > .infoBlock {
     display: block;
 }
 
