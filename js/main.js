@@ -209,7 +209,7 @@ var outputConfig;
       $('#AH').hide(1000);
     } else {
       $('#ESP').show(1000);
-      $('#AH').show(1000);
+      $('#AH').show0(1000);
     }
   }
 
@@ -218,12 +218,16 @@ var outputConfig;
   }
   
   function expMode() {
-    if(this.value == 'On') {
-      $('.infoBlock').css('display','block');
-    } 
-    if(this.value == 'Off') {
-      $('.infoBlock').css('display','none');
+    // if($('#expI_O').prop('checked')) {
+      if(document.getElementById('expI_O').checked) {
+      // $('.forInfo').css('pointerEvents','all');
+      console.log('yes');
     }
+    else {
+      // $('.forInfo').css('pointerEvents','none');
+      console.log('no');
+    }
+    
   }
   //AES_BIT_show/hide
   $('#p1-aes').click(togleLengthAes);
@@ -240,8 +244,7 @@ var outputConfig;
   $('#result-btn').click(getResult);
   $('#result-btn').click(showResBlock)
   //OffHelp_(ExpertMode)
-  $('#btnExpertOn').click(expMode);
-  $('#btnExpertOff').click(expMode);
+  $('#btnExpert').click(expMode);
   
 
 })();
