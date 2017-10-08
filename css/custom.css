@@ -247,7 +247,9 @@ header {
 
 .forInfo:hover ~ .infoBlock {
     opacity: 1;
-    height: 100px;
+    opacity: 1;
+    height: 15vh;
+    min-height: 100%;
 }
 
 .infoBlock {
