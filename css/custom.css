@@ -156,7 +156,6 @@ textarea {
     color: #444;
     font-size: 1.4rem;
     font-weight: 300;
-    cursor: help;
 }
 
 .check-b {
@@ -242,15 +241,49 @@ header {
     text-align: center;
 }
 
-.forInfo:hover > .infoBlock {
-    display: block;
+.forInfo {
+    cursor: help;
+}
+
+.forInfo:hover ~ .infoBlock {
+    opacity: 1;
+    height: 100px;
 }
 
 .infoBlock {
-    display: none;
-    background: #444;
+    display: block;
+    background: rgba(96, 125, 139, 0.71);
     color: #fff;
+    font-size: 0.9rem;
+    font-weight: 300;
+    box-shadow: inset 0px 4px 4px #777;
+    -webkit-transition: height .5s, opacity .5s;
+    height: 0px;
+    opacity: 0;
 }
+
+
+
+.btnRecomend {
+    position: absolute;
+	line-height: 18px;
+	padding: 0 6px;
+	font-weight: 700;
+    background: #f44336;
+    color: white;
+	border-radius: 100%;
+	top: -5px;
+    right: -5px;
+    font-size: 12px;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+	}
+.btn:hover .btnRecomend {
+	text-decoration: none;
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+
+	}
 
 /* FOOTER  */
 

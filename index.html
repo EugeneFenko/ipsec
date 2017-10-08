@@ -46,8 +46,8 @@
                             <hr>
                         </div>
                         <div id="phase1" class="col-12">
-                            <div class="row bord-b align-items-center forInfo">
-                                <div class="col-12 col-md-3">
+                            <div class="row bord-b align-items-center ">
+                                <div class="col-12 col-md-3 forInfo">
 
                                     <span class="name-l">Hash:</span>
 
@@ -55,23 +55,30 @@
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
-                                        <span class="btn blue conf-btn">md5</span>
+                                        <span class="btn blue conf-btn">MD5</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha1">
-                                        <span class="btn blue conf-btn">sha1</span> 
+                                        <span class="btn blue conf-btn">SHA<b class="btnRecomend">R</b></span>
+                            
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
-                                    <p class="info">Help info/Hash.</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            Set hash algorithm for protection suite:
+                                        </div>
+                                        <div class="col">MD5 Message Digest 5</div>
+                                        <div class="col">SHA Secure Hash Standard</div>
+                                    </div>           
                                 </div>
                             </div>
 
-                            <div class="row bord-b align-items-center forInfo">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Encryption:</span>
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l ">Encryption:</span>
                                 </div>
                                 <div class="col center circle">
                                     <label>
@@ -88,17 +95,24 @@
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
-                                        <span  class="btn blue conf-btn">AES</span>
+                                        <span  class="btn blue conf-btn">AES<b class="btnRecomend">R</b></span> 
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
-                                    <p class="info">Help info/Encr.</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            Set encryption algorithm for protection suite:
+                                        </div>
+                                        <div class="col">3des  Three key triple DES</div>
+                                        <div class="col">DES - Data Encryption Standard (56 bit keys)</div>
+                                        <div class="col">AES - Advanced Encryption Standard</div>
+                                    </div>   
                                 </div>
                             </div>
-                            <div class="row" id="lengthAes">
-                                <div class="row bord-b align-items-center forInfo">
-                                    <div class="col-12 col-md-3">
-                                        <span class="name-l">Bit keys:</span>
+                            <div class="row align-items-center" id="lengthAes">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l ">Bit keys:</span>
                                     </div>
                                     <div class="col center circle">
                                         <label>
@@ -115,19 +129,30 @@
                                     <div class="col center circle">
                                         <label>
                                         <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
-                                        <span  class="btn blue conf-btn">256</span>
+                                        <span  class="btn blue conf-btn">256<b class="btnRecomend">R</b></span> 
                                     </label>
                                     </div>
+                                    <div class="col-12 infoBlock">
+                                        <div class="container">
+                                            <div class="row">
+                                        <div class="col-12">
+                                            Set AES bit keys:
+                                        </div>
+                                        <div class="col">128 bit keys</div>
+                                        <div class="col">192 bit keys</div>
+                                        <div class="col">256 bit keys</div>
+                                    </div>
+                                        </div>
+                                    
                                 </div>
-                                <div class="col-12 infoBlock">
-                                    <p class="info">Help info/AES bit.</p>
                                 </div>
+                                
                             </div>
 
 
-                            <div class="row bord-b align-items-center forInfo">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Group:</span>
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l ">Group:</span>
                                 </div>
                                 <div class="col center circle">
                                     <label>
@@ -144,35 +169,41 @@
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
-                                        <span  class="btn blue conf-btn">5</span>
+                                        <span  class="btn blue conf-btn">5<b class="btnRecomend">R</b></span> 
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
-                                    <p class="info">Help info/Groupe.</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            Set the Diffie-Hellman group:
+                                        </div>
+                                        <div class="col">1   Diffie-Hellman group 1 (768 bit)</div>
+                                        <div class="col">2   Diffie-Hellman group 2 (1024 bit)</div>
+                                        <div class="col">5   Diffie-Hellman group 5 (1536 bit)</div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="row align-items-center forInfo">
-                                <div class="col-12 col-md-4 center">
-                                    <span class="name-l">Lifetime:</span>
-
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4 center ">
+                                    <span class="name-l ">Lifetime:</span>
                                     <input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
                                 </div>
 
-                                <div class="col-12 col-md-4 center">
-                                    <span class="name-l">IP destination router:</span>
-
+                                <div class="col-12 col-md-4 center ">
+                                    <span class="name-l ">IP destination router:</span>
                                     <input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
                                 </div>
 
                                 <div class="col-12 col-md-4 center">
-                                    <span class="name-l">Key:</span>
-
+                                    <span class="name-l ">Key:</span>
                                     <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
                                 </div>
-                                <div class="col-12 infoBlock">
-                                    <p class="info">Help info/Text.</p>
-                                </div>
+                                <!-- <div class="col-12 infoBlock">
+                                    <p class="info">Set lifetime for ISAKMP security association; 
+                                                    Set pre-shared key for remote peer; 
+                                                    Set Peer Policy;</p>
+                                </div> -->
                             </div>
 
                             <div class="row no-gutters justify-content-center">

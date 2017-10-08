@@ -224,8 +224,8 @@ var outputConfig;
     else {
       $('.forInfo').css('pointerEvents','none');
     }
-    
   }
+
   //AES_BIT_show/hide
   $('#p1-aes').click(togleLengthAes);
   $('#p1-des').click(togleLengthAes);
