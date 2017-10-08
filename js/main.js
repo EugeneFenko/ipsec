@@ -209,7 +209,7 @@ var outputConfig;
       $('#AH').hide(1000);
     } else {
       $('#ESP').show(1000);
-      $('#AH').show0(1000);
+      $('#AH').show(1000);
     }
   }
 
@@ -219,10 +219,10 @@ var outputConfig;
   
   function expMode() {
     if($('#expI_O').prop('checked')) {
-      $('.forInfo').css('pointerEvents','all');
+      $('.forInfo').css('pointerEvents','none');
     }
     else {
-      $('.forInfo').css('pointerEvents','none');
+      $('.forInfo').css('pointerEvents','all');
     }
   }
 

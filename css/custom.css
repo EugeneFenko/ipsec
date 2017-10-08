@@ -247,9 +247,16 @@ header {
 
 .forInfo:hover ~ .infoBlock {
     opacity: 1;
+    height: 130px;
+    padding: 10px;
+}
+
+@media(max-width:719px) {
+    .forInfo:hover ~ .infoBlock {
     opacity: 1;
-    height: 15vh;
-    min-height: 100%;
+    height: 180px;
+    padding: 10px;
+}
 }
 
 .infoBlock {
@@ -259,9 +266,10 @@ header {
     font-size: 0.9rem;
     font-weight: 300;
     box-shadow: inset 0px 4px 4px #777;
-    -webkit-transition: height .5s, opacity .5s;
-    height: 0px;
+    -webkit-transition: height .5s, opacity .5s, padding 0.5s;
+    height: 0;
     opacity: 0;
+    padding: 0;
 }
 
 
@@ -308,7 +316,7 @@ footer {
     display: inline-block;
     cursor: pointer;
     user-select: none;
-    margin: 0 0 5px 0;
+    margin: 0 0 2px 0;
   }
   .tgl,
   .tgl:after,
@@ -481,14 +489,20 @@ footer {
 }
 
 #btnExpert {
-    position: fixed;
-    bottom: 50px;
-    right: 8px;
-    z-index: 10;
+    font-size: 12px;
 }
 
 /* Result */
 
 .result-block{
     display: none;
+}
+
+.toolBox {
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(200, 200, 200, 0.7)
 }
