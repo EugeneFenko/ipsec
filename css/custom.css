@@ -261,11 +261,11 @@ header {
 
 .infoBlock {
     display: block;
-    background: rgba(96, 125, 139, 0.71);
-    color: #fff;
+    background: #ebeff1;
     font-size: 0.9rem;
     font-weight: 300;
-    box-shadow: inset 0px 4px 4px #777;
+    color: #555;
+    box-shadow: inset 0px 15px 5px -11px #777;
     -webkit-transition: height .5s, opacity .5s, padding 0.5s;
     height: 0;
     opacity: 0;
