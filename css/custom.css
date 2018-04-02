@@ -221,7 +221,7 @@ header {
 
 /* CONTENT  */
 .content {
-    min-height: 80vh;
+    min-height: calc(100vh - 90px);
     background: #ebeff1;
 }
 
