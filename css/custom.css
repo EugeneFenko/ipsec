@@ -542,7 +542,7 @@ hr.speedSecurityLine::before {
     position: absolute;
     height: 40px;
     width: 40px;
-    background: url('/img/speed.svg');
+    background: url('/ipsec/img/speed.svg');
     filter: brightness(0.8);
     background-size: 100%;
     top: -15px;
@@ -554,7 +554,7 @@ hr.speedSecurityLine::after {
     position: absolute;
     height: 40px;
     width: 40px;
-    background: url('/img/lock.svg');
+    background: url('/ipsec/img/lock.svg');
     background-size: 100%;
     top: -15px;
     right: -50px;
