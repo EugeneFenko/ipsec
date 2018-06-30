@@ -3,18 +3,18 @@
 <html lang="en">
 
 <head>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38749006-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38749006-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-38749006-4');
-</script>
+        gtag('config', 'UA-38749006-4');
+    </script>
 
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -26,6 +26,10 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
 
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -34,9 +38,10 @@
         <div style="z-index:10;" id="particle"></div>
         <div class="row" style="z-index:11;">
             <div class="col-12">
-                <h1 id="logo-text">Smart IPsec<br>
+                <h1 id="logo-text">Smart IPsec
+                    <br>
                     <span class="txt-rotate" data-period="2000" data-rotate='[ "- it`s easy","- it`s fast", "- it`s pretty", "- it`s fun!" ]'>
-                </span>
+                    </span>
                 </h1>
             </div>
             <div class="col-12 center justify-content-end">
@@ -59,10 +64,20 @@
                             <hr>
                         </div>
                         <div id="phase1" class="col-12">
+                            <div class="row rowFix bord-b">
+                                    <div class="col-12 col-md-3">
+                                        <span class="name-l">Policy number:</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" name="policyNumber" value="1" placeholder="Number/Priority (1 - 10000)">
+                                    </div>
+                            </div>
+
                             <div class="row bord-b align-items-center ">
                                 <div class="col-12 col-md-3 forInfo">
 
-                                    <span class="name-l">Hash:</span>
+                                    <span class="name-l">Hash: </span>
+                                    <i class="fas fa-info-circle"></i>
 
                                 </div>
                                 <div class="col center circle">
@@ -74,51 +89,67 @@
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha">
-                                        <span class="btn blue conf-btn">SHA<b class="btnRecomend">R</b></span>
-                            
+                                        <span class="btn blue conf-btn">SHA
+                                            <b class="btnRecomend">R</b>
+                                        </span>
+
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
-                                    <div class="row">
+                                    <div class="row center">
+
                                         <div class="col-12">
-                                            Set hash algorithm for protection suite:
+                                            Set hash algorithm for Internet Security Association and Key Management Protocol (ISAKMP):
                                         </div>
-                                        <div class="col">MD5 Message Digest 5</div>
-                                        <div class="col">SHA Secure Hash Standard</div>
+                                        <div class="col">MD5 Message Digest 5
+                                            <br>(128 bit, not recommended)</div>
+                                        <div class="col">SHA Secure Hash Standard
+                                            <br>(160 bit)</div>
+                                        <hr class="speedSecurityLine">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l ">Encryption:</span>
+                                    <span class="name-l ">Encryption: </span>
+                                    <i class="fas fa-info-circle"></i>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
-                                        <span  class="btn blue conf-btn">DES</span>
+                                        <span class="btn blue conf-btn">DES</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
-                                        <span  class="btn blue conf-btn">3DES</span>
+                                        <span class="btn blue conf-btn">3DES</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
-                                        <span  class="btn blue conf-btn">AES<b class="btnRecomend">R</b></span> 
+                                        <span class="btn blue conf-btn">AES
+                                            <b class="btnRecomend">R</b>
+                                        </span>
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
                                     <div class="row">
                                         <div class="col-12">
-                                            Set encryption algorithm for protection suite:
+                                            Set encryption algorithm for Internet Security Association and Key Management Protocol (ISAKMP):
                                         </div>
-                                        <div class="col">3des Three key triple DES</div>
-                                        <div class="col">DES - Data Encryption Standard (56 bit keys)</div>
-                                        <div class="col">AES - Advanced Encryption Standard</div>
+                                        <div class="col">DES
+                                            <br>Data Encryption Standard
+                                            <br>(56 bit, not recommended)</div>
+                                        <div class="col">3DES
+                                            <br>Three key triple DES
+                                            <br>(168 bit)</div>
+                                        <div class="col">AES
+                                            <br>Advanced Encryption Standard
+                                            <br>(128,192,256 bit, recommended)</div>
+                                        <hr class="speedSecurityLine">
                                     </div>
                                 </div>
                             </div>
@@ -126,36 +157,40 @@
                                 <div class="row bord-b rowFix align-items-center">
                                     <div class="col-12 col-md-3 forInfo">
                                         <span class="name-l ">Bit keys:</span>
+                                        <i class="fas fa-info-circle"></i>
                                     </div>
                                     <div class="col center circle">
                                         <label>
-                                        <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
-                                        <span  class="btn blue conf-btn">128</span>
-                                    </label>
+                                            <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
+                                            <span class="btn blue conf-btn">128</span>
+                                        </label>
                                     </div>
                                     <div class="col center circle">
                                         <label>
-                                        <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
-                                        <span  class="btn blue conf-btn">192</span>
-                                    </label>
+                                            <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
+                                            <span class="btn blue conf-btn">192</span>
+                                        </label>
                                     </div>
                                     <div class="col center circle">
                                         <label>
-                                        <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
-                                        <span  class="btn blue conf-btn">256<b class="btnRecomend">R</b></span> 
-                                    </label>
+                                            <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
+                                            <span class="btn blue conf-btn">256
+                                                <b class="btnRecomend">R</b>
+                                            </span>
+                                        </label>
                                     </div>
                                     <div class="col-12 infoBlock">
-                                        
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    Set AES bit keys:
-                                                </div>
-                                                <div class="col">128 bit keys</div>
-                                                <div class="col">192 bit keys</div>
-                                                <div class="col">256 bit keys</div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                Set AES bit keys:
                                             </div>
-                                        
+                                            <div class="col">128 bit keys</div>
+                                            <div class="col">192 bit keys</div>
+                                            <div class="col">256 bit keys</div>
+                                            <hr class="speedSecurityLine">
+                                        </div>
+
 
                                     </div>
                                 </div>
@@ -165,34 +200,41 @@
 
                             <div class="row bord-b align-items-center">
                                 <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l ">Group:</span>
+                                    <span class="name-l ">Group: </span>
+                                    <i class="fas fa-info-circle"></i>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
-                                        <span  class="btn blue conf-btn">1</span>
+                                        <span class="btn blue conf-btn">1</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
-                                        <span  class="btn blue conf-btn">2</span>
+                                        <span class="btn blue conf-btn">2</span>
                                     </label>
                                 </div>
                                 <div class="col center circle">
                                     <label>
                                         <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
-                                        <span  class="btn blue conf-btn">5<b class="btnRecomend">R</b></span> 
+                                        <span class="btn blue conf-btn">5
+                                            <b class="btnRecomend">R</b>
+                                        </span>
                                     </label>
                                 </div>
                                 <div class="col-12 infoBlock">
                                     <div class="row">
                                         <div class="col-12">
-                                            Set the Diffie-Hellman group:
+                                            Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):
                                         </div>
-                                        <div class="col">1 Diffie-Hellman group 1 (768 bit)</div>
-                                        <div class="col">2 Diffie-Hellman group 2 (1024 bit)</div>
-                                        <div class="col">5 Diffie-Hellman group 5 (1536 bit)</div>
+                                        <div class="col">1 Diffie-Hellman group 1
+                                            <br>(768 bit)</div>
+                                        <div class="col">2 Diffie-Hellman group 2
+                                            <br>(1024 bit)</div>
+                                        <div class="col">5 Diffie-Hellman group 5
+                                            <br>(1536 bit)</div>
+                                        <hr class="speedSecurityLine">
                                     </div>
                                 </div>
                             </div>
@@ -241,6 +283,201 @@
                         <div class="col-12">
 
                             <div class="col-12">
+                                <h3>IPsec setting</h3>
+                                <hr>
+                            </div>
+
+
+                            <div class="row rowFix">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l">Transform-set:</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="transformName" value="" placeholder="Name">
+                                </div>
+                            </div>
+
+
+                            <div class="row bord-b align-items-center">
+
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l">Type: </span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">ESP</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH/ESP</span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            Set the IPSec type:
+                                        </div>
+                                        <div class="col">
+                                            Authentication Header
+                                            <br>(AH)
+                                            <ul style="text-align: left;">
+                                                <li>Authentication</li>
+                                                <li>Integrality</li>
+                                                <li>Replay-attacks protection</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            Encapsulation Security Payload
+                                            <br>(ESP)
+                                            <ul style="text-align: left;">
+                                                <li>Encryption</li>
+                                                <li>Authentication</li>
+                                                <li>Integrality</li>
+                                                <li>Replay-attacks protection</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">Authentication Header
+                                            <br>+
+                                            <br>Encapsulation Security Payload</div>
+                                        <hr class="speedSecurityLine">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="AH">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l">AH: </span>
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
+                                            <span class="btn blue conf-btn">MD5</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
+                                            <span class="btn blue conf-btn">SHA</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 infoBlock">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                Set the AH mode:
+                                            </div>
+                                            <div class="col">MD5 Message Digest 5
+                                                <br>(128 bit, not recommended)</div>
+                                            <div class="col">SHA Secure Hash Standard
+                                                <br>(160 bit)</div>
+                                            <hr class="speedSecurityLine">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ESP">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l">ESP: </span>
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
+                                            <span class="btn blue conf-btn">DES</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
+                                            <span class="btn blue conf-btn">3DES</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
+                                            <span class="btn blue conf-btn">AES</span>
+                                        </label>
+                                    </div>
+                                    +
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
+                                            <span class="btn yellow conf-btn">MD5</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center ">
+                                        <label>
+                                            <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
+                                            <span class="btn yellow conf-btn">SHA</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 infoBlock">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                Set the Encapsulation Security Payload mode:
+                                            </div>
+                                            <div class="col">DES
+                                                <br>Data Encryption Standard
+                                                <br>(56 bit, not recommended)</div>
+                                            <div class="col">3DES
+                                                <br>Three key triple DES
+                                                <br>(168 bit)</div>
+                                            <div class="col">AES
+                                                <br>Advanced Encryption Standard
+                                                <br>(128,192,256 bit, recommended)</div>
+                                            <hr class="speedSecurityLine">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l">Mode: </span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="ipsecMode" id="p2-tunnel" class="conf-input" value="tunnel">
+                                        <span class="btn blue conf-btn">Tunnel</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="ipsecMode" id="p2-transport" class="conf-input" value="transport">
+                                        <span class="btn blue conf-btn">Transport</span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            Set the IPSec mode:
+                                        </div>
+                                        <div class="col">Tunnel
+                                            <br>(Gateway-Gateway, default)</div>
+                                        <div class="col">Transport
+                                            <br>(Host-Host)</div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mrg-top-50">
                                 <h3>Access-list setting</h3>
                                 <hr>
                             </div>
@@ -277,148 +514,6 @@
                                     <input type="text" name="destMask" value="" placeholder="0.0.0.255">
                                 </div>
                             </div>
-                            
-
-
-
-                            <div class="col-12 mrg-top-50">
-                                <h3>IPsec setting</h3>
-                                <hr>
-                            </div>
-
-
-                            <div class="row rowFix">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Transform-set:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="transformName" value="" placeholder="Name">
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            Set the IPSec name:
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="row bord-b align-items-center">
-
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Type:</span>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">AH</span>
-                                    </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">ESP</span>
-                                    </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">AH/ESP</span>
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            Set the IPSec mode:
-                                        </div>
-                                        <div class="col">Auth. header</div>
-                                        <div class="col">ESP</div>
-                                        <div class="col">AH+ESP</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="AH">
-                                <div class="row bord-b align-items-center">
-                                    <div class="col-12 col-md-3 forInfo">
-                                        <span class="name-l">AH:</span>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
-                                        <span class="btn blue conf-btn">MD5</span>
-                                    </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
-                                        <span class="btn blue conf-btn">SHA</span>
-                                    </label>
-                                    </div>
-                                    <div class="col-12 infoBlock">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Set the AH:
-                                            </div>
-                                            <div class="col">MD5</div>
-                                            <div class="col">SHA</div>
-                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="ESP">
-                                <div class="row bord-b align-items-center">
-                                    <div class="col-12 col-md-3 forInfo">
-                                        <span class="name-l">ESP:</span>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
-                                        <span class="btn blue conf-btn">DES</span>
-                                    </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
-                                        <span class="btn blue conf-btn">3DES</span>
-                                    </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
-                                        <span class="btn blue conf-btn">AES</span>
-                                    </label>
-                                    </div>
-                                    +
-                                    <div class="col center">
-                                        <label>
-                                        <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
-                                        <span class="btn yellow conf-btn">MD5</span>
-                                    </label>
-                                    </div>
-                                    <div class="col center ">
-                                        <label>
-                                        <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
-                                        <span class="btn yellow conf-btn">SHA</span>
-                                    </label>
-                                    </div>
-                                    <div class="col-12 infoBlock">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                Set the ESP:
-                                            </div>
-                                            <div class="col">DES</div>
-                                            <div class="col">3DES</div>
-                                            <div class="col">AES</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
 
 
                             <div class="col-12 mrg-top-50">
@@ -428,7 +523,8 @@
 
                             <div class="row rowFix">
                                 <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Name/Number:</span>
+                                    <span class="name-l">Name/Number: </span>
+                                    <i class="fas fa-info-circle"></i>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="mapName" value="" placeholder="NAME">
@@ -439,9 +535,15 @@
                                 <div class="col-12 infoBlock">
                                     <div class="row">
                                         <div class="col-12">
-                                            Set the Crypto MAP 
+                                            Set the Crypto MAP name and number
+                                            <br> Crypto map contain:
+                                            <ul style="text-align: left;">
+                                                <li>Peer info</li>
+                                                <li>Match address info (ACL)</li>
+                                                <li>Transform-set info (IPSec)</li>
+                                            </ul>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +556,8 @@
 
                             <div class="row rowFix">
                                 <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Interface:</span>
+                                    <span class="name-l">Interface: </span>
+                                    <i class="fas fa-info-circle"></i>
                                 </div>
                                 <div class="col">
                                     <input type="text" name="interfaceName" value="" placeholder="fa0/0">
@@ -462,7 +565,7 @@
                                 <div class="col-12 infoBlock">
                                     <div class="row align-items-center">
                                         <div class="col-12">
-                                            Set the interface name
+                                            Set the name of the interface that looks on the Internet side on your router
                                         </div>
 
                                     </div>
@@ -520,8 +623,9 @@
         <div class="row">
             <div class="col"></div>
             <div class="col center align-content-center">
-                <p><a href="https://eugenefenko.github.io/">Eugene Fenko</a> | 2017</p>
-               
+                <p>
+                    <a href="https://eugenefenko.github.io/">Eugene Fenko</a> | 2017</p>
+
             </div>
             <div class="col"></div>
         </div>
@@ -530,10 +634,12 @@
     <div class="container-fluid toolBox">
         <div class="row">
             <div class="col-12 toolBox_content align-middle">
-                <sapn class="">Expert mode: <label class="tgl tgl-gray align-middle" id="btnExpert">  
-                  <input id='expI_O' type="checkbox" />
-                    <span>&nbsp;&nbsp;</span>
-                 </label></sapn>
+                <sapn class="">Expert mode:
+                    <label class="tgl tgl-gray align-middle" id="btnExpert">
+                        <input id='expI_O' type="checkbox" />
+                        <span>&nbsp;&nbsp;</span>
+                    </label>
+                </sapn>
             </div>
         </div>
     </div>

@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=cyrillic-ext'); 
 /* font-family: 'Roboto', sans-serif;  */
 
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+           src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+           src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
 
 /* RESET  */
 *{
@@ -40,6 +52,7 @@ a,a:hover,a:link,a:visited {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  z-index: 5;
 }
 
 @media(max-width: 424px) {
@@ -243,20 +256,13 @@ header {
 
 .forInfo {
     cursor: help;
+    z-index: 10;
 }
 
 .forInfo:hover ~ .infoBlock {
     opacity: 1;
-    height: 130px;
+    height: 100%;
     padding: 10px;
-}
-
-@media(max-width:719px) {
-    .forInfo:hover ~ .infoBlock {
-    opacity: 1;
-    height: 180px;
-    padding: 10px;
-}
 }
 
 .rowFix {
@@ -512,4 +518,44 @@ footer {
     left: 0;
     right: 0;
     background: rgba(200, 200, 200, 0.7)
+}
+
+@media (min-width: 576px) { 
+    hr.speedSecurityLine {
+        width: 70%;
+        margin: 10px 15% 20px 15%;
+    }
+}
+
+hr.speedSecurityLine {
+    background: linear-gradient(to right, #5678FF, #1ECC21); /*Standard*/
+    height: 10px;
+    width: 80%;
+    margin: 10px 10% 20px 10%;
+    position: relative;
+}
+
+
+
+hr.speedSecurityLine::before {
+    content: " ";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: url('/img/speed.svg');
+    filter: brightness(0.8);
+    background-size: 100%;
+    top: -15px;
+    left: -50px;
+}
+
+hr.speedSecurityLine::after {
+    content: " ";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: url('/img/lock.svg');
+    background-size: 100%;
+    top: -15px;
+    right: -50px;
 }

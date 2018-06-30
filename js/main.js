@@ -113,6 +113,7 @@ var outputConfig;
     var dataForm = document.querySelector('#data-form');
     var model = {
       //1phase
+      policyNumber: '',
       hash: '',
       encryption: '',
       group: '',
@@ -131,6 +132,7 @@ var outputConfig;
       destMask: '',
       //IPSEC
       transformName: '',
+      ipsecMode: '',
       //AH
       hashAH: '',
       //ESP
@@ -155,7 +157,7 @@ var outputConfig;
      if($('#ESP').css('display') == 'none'){model.encESP='', model.hashESP=''};
     
     
-    outputConfig = 'crypto isakmp policy 1\r\n' +
+    outputConfig = 'crypto isakmp policy ' + model.policyNumber +'\r\n' +
       'authentication pre-share\r\n' +
       'hash ' + model.hash + '\r\n' +
       'encryption ' + model.encryption + ' ' +
@@ -166,6 +168,7 @@ var outputConfig;
       'crypto isakmp key ' + model.key + ' address ' +
       model.nextRouterAddress + '\r\n\r\n' + 
       'crypto ipsec transform-set ' + model.transformName + ' '+ model.hashAH+' '+ model.encESP+' '+ model.hashESP +'\r\n' + 
+      'mode ' + model.ipsecMode + '\r\n' +
       'access-list ' + model.numberAcl + ' permit ip '+model.sourceAddress+' '+model.sourceMask+' '+model.destAddress+' '+model.destMask+'\r\n\r\n' + 'crypto map ' + model.mapName + ' ' + model.mapNumber + ' ipsec-isakmp\r\n' + 'set peer '+model.nextRouterAddress+'\r\n'+'match address '+model.numberAcl+'\r\n'+'set transform-set '+model.transformName+'\r\nexit\r\n\r\n'+'interface '+model.interfaceName+'\r\n'+'crypto map '+model.mapName+'\r\n';
       
       
