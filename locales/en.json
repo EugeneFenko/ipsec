@@ -1,0 +1,116 @@
+{
+  "page": {
+    "lang": "en",
+    "title": "Smart IPSec"
+  },
+  "header": {
+    "button": "🚀 Create"
+  },
+  "ph1": {
+    "title": "I phase",
+    "policy": "Policy number:",
+    "policy-placeholder": "Number/Priority (1 - 10000)",
+    "hash": {
+      "name": "Hash: ",
+      "help": "Set hash algorithm for Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-md": "MD5 Message Digest 5 <br> (128 bit, not recommended)",
+      "help-sha": "SHA Secure Hash Standard <br> (160 bit)"
+    },
+    "encryption": {
+      "name": "Encryption: ",
+      "help": "Set encryption algorithm for Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-des": "DES<br>Data Encryption Standard<br>(56 bit, not recommended)",
+      "help-3des": "3DES<br>Three key triple DES<br>(168 bit)",
+      "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)"
+    },
+    "bit": {
+      "name": "Bit keys:",
+      "help": "Set AES bit keys:",
+      "help-128": "128 bit keys",
+      "help-192": "192 bit keys",
+      "help-256": "256 bit keys"
+    },
+    "group": {
+      "name": "Group: ",
+      "help": "Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-g1": "1 Diffie-Hellman group 1<br>(768 bit)",
+      "help-g2": "2 Diffie-Hellman group 2<br>(1024 bit)",
+      "help-g5": "5 Diffie-Hellman group 5<br>(1536 bit)"
+    },
+    "lifetime": "Lifetime:",
+    "destination": "IP destination router:",
+    "key": "Key:",
+    "next-btn": "Next phase",
+    "back-btn": "Show"
+  },
+  "ph2": {
+    "title": "II phase",
+    "ipsec": {
+      "name": "IPsec setting",
+      "transform": "Transform-set:",
+      "transform-placeholder": "Name",
+      "type": {
+        "name": "Type: ",
+        "help": "Set the IPSec type:",
+        "help-ah": "Authentication Header<br>(AH)<ul style='text-align: left;'><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul>",
+        "help-esp": "Encapsulation Security Payload<br>(ESP)<ul style='text-align: left;'><li>Encryption</li><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul>",
+        "help-ah-esp": "Authentication Header<br>+<br>Encapsulation Security Payload"
+      },
+      "ah": {
+        "help": "Set the AH mode:",
+        "md": "MD5 Message Digest 5<br>(128 bit, not recommended)",
+        "sha": "SHA Secure Hash Standard<br>(160 bit)"
+      },
+      "esp": {
+        "help": "Set the Encapsulation Security Payload mode:",
+        "help-des": "DES<br>Data Encryption Standard<br>(56 bit, not recommended)",
+        "help-3des": "3DES<br>Three key triple DES<br>(168 bit)",
+        "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)"
+      },
+      "mode": {
+        "name": "Mode: ",
+        "tunnel": "Tunnel",
+        "transport": "Transport",
+        "help": "Set the IPSec mode:",
+        "help-tun": "Tunnel<br>(Gateway-Gateway, default)",
+        "help-trans": "Transport<br>(Host-Host)"
+      }
+    },
+    "acc": {
+      "title": "Access-list setting",
+      "name": "ACL-number:"
+    },
+    "network": {
+      "source": "Source network:",
+      "destination": "Destination network:"
+    },
+    "map": {
+      "title": "Crypto-map setting",
+      "name": "Name/Number: ",
+      "name-place": "NAME",
+      "help": " Set the Crypto MAP name and number<br> Crypto map contain:<ul style='text-align: left;'><li>Peer info</li><li>Match address info (ACL)</li><li>Transform-set info (IPSec)</li></ul>"
+    },
+    "int": {
+      "title": "Interface setting",
+      "name": "Interface: ",
+      "help": "Set the name of the interface that looks on the Internet side on your router"
+    },
+    "result-btn": "Result"
+  },
+  "result": {
+    "title": "Result:",
+    "text-name": "Text setting",
+    "text-area": "#enable // example configure text &#013;&#010;#configure terminal",
+    "down-name": "Download settings file",
+    "down-btn": "Download",
+    "down-help": "(Download config.txt file configuration)",
+    "qr": "QR code setting"
+  },
+  "footer": {
+    "author": "Eugene Fenko"
+  },
+  "expert": "Expert mode:",
+  "links": {
+    "back": "../"
+  }
+}

@@ -1,6 +1,7 @@
 /*    Eugene Fenko | Copyright 2017   */
 @import url('https://fonts.googleapis.com/css?family=Monoton'); /* font-family: 'Monoton', cursive; */ 
 /* font-family: 'Roboto', sans-serif;  */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
 
 @font-face {
     font-family: "FontAwesome";
@@ -24,7 +25,7 @@
 /* MAIN  */
 
 body,html {
-    font-family: monospace;
+    font-family: Roboto, monospace;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -226,7 +227,7 @@ header {
     font-family: 'Monoton', cursive;
 }
 
-#messenger {
+.messenger {
     font-family: monospace;
     font-weight: 100;
     font-size: 1.5rem;
@@ -565,4 +566,18 @@ hr.speedSecurityLine::after {
     background-size: 100%;
     top: -15px;
     right: -50px;
+}
+
+
+
+.lng-sw {
+    position: fixed;
+    left: 0;
+    top: 50vh;
+    width: 41px;
+    z-index: 1000;
+    background: #464a4ecf;
+}
+.lng-sw img {
+    width: 40px;
 }
