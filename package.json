@@ -4,7 +4,10 @@
   "description": "Smart solution for configuration Cisco IOS IPSec VPN.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "build": "gulp bld",
+    "deploy": "node index",
+    "clear": "gulp clr"
   },
   "repository": {
     "type": "git",

@@ -42,6 +42,11 @@ gulp.task('dev',['browser-sync', 'i18n', 'reApp'], function() {
   gulp.watch('./src/index.html',['i18n']);
   gulp.watch('./src/css/*.css',['reApp'])
   gulp.watch('./src/js/*.js',['reApp'])
-  gulp.watch('./locales/*.json')
+  gulp.watch('./locales/*.json',['i18n'])
   // Наблюдение за другими типами файлов
+});
+
+
+gulp.task('bld',['i18n', 'reApp'], function() {
+  // build
 });

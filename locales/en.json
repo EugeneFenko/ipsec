@@ -4,7 +4,7 @@
     "title": "Smart IPSec"
   },
   "header": {
-    "button": "🚀 Create"
+    "button": "🚀 Create configuration"
   },
   "ph1": {
     "title": "I phase",
@@ -24,14 +24,14 @@
       "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)"
     },
     "bit": {
-      "name": "Bit keys:",
-      "help": "Set AES bit keys:",
-      "help-128": "128 bit keys",
-      "help-192": "192 bit keys",
-      "help-256": "256 bit keys"
+      "name": "Key lenght:",
+      "help": "Set key lenght for AES:",
+      "help-128": "128 bit key lenght",
+      "help-192": "192 bit key lenght",
+      "help-256": "256 bit key lenght"
     },
     "group": {
-      "name": "Group: ",
+      "name": "Group DH: ",
       "help": "Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):",
       "help-g1": "1 Diffie-Hellman group 1<br>(768 bit)",
       "help-g2": "2 Diffie-Hellman group 2<br>(1024 bit)",
@@ -40,8 +40,8 @@
     "lifetime": "Lifetime:",
     "destination": "IP destination router:",
     "key": "Key:",
-    "next-btn": "Next phase",
-    "back-btn": "Show"
+    "next-btn": "Next",
+    "back-btn": "Back"
   },
   "ph2": {
     "title": "II phase",
@@ -111,6 +111,9 @@
   },
   "expert": "Expert mode:",
   "links": {
-    "back": ""
+    "back": "",
+    "en":"/ipsec",
+    "ru":"/ipsec/ru",
+    "uk":"/ipsec/uk"
   }
 }

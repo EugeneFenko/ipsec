@@ -4,112 +4,116 @@
     "title": "Smart IPSec"
   },
   "header": {
-    "button": "🚀 Створити"
+    "button": "🚀 Створити конфігурацію"
   },
   "ph1": {
-    "title": "I phase",
-    "policy": "Policy number:",
-    "policy-placeholder": "Number/Priority (1 - 10000)",
+    "title": "Конфігурація фази I",
+    "policy": "Номер політики:",
+    "policy-placeholder": "Номер/Приорітет (1 - 10000)",
     "hash": {
-      "name": "Hash: ",
-      "help": "Set hash algorithm for Internet Security Association and Key Management Protocol (ISAKMP):",
-      "help-md": "MD5 Message Digest 5 <br> (128 bit, not recommended)",
-      "help-sha": "SHA Secure Hash Standard <br> (160 bit)"
+      "name": "Хешування: ",
+      "help": "Оберіть хеш-алгоритм для Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-md": "MD5 Message Digest 5 <br> (128 біт, не рекомендується)",
+      "help-sha": "SHA Secure Hash Standard <br> (160 біт)"
     },
     "encryption": {
-      "name": "Encryption: ",
-      "help": "Set encryption algorithm for Internet Security Association and Key Management Protocol (ISAKMP):",
-      "help-des": "DES<br>Data Encryption Standard<br>(56 bit, not recommended)",
-      "help-3des": "3DES<br>Three key triple DES<br>(168 bit)",
-      "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)"
+      "name": "Шифрування: ",
+      "help": "Оберіть алгоритм шифрування для Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-des": "DES<br>Data Encryption Standard<br>(56 біт, не рекомендується)",
+      "help-3des": "3DES<br>Three key triple DES<br>(168 біт)",
+      "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 біт, рекомендується)"
     },
     "bit": {
-      "name": "Bit keys:",
-      "help": "Set AES bit keys:",
-      "help-128": "128 bit keys",
-      "help-192": "192 bit keys",
-      "help-256": "256 bit keys"
+      "name": "Довжина ключа:",
+      "help": "Оберіть довжину ключа шифрування AES:",
+      "help-128": "128-бітний ключ",
+      "help-192": "192-бітний ключ",
+      "help-256": "256-бітний ключ"
     },
     "group": {
-      "name": "Group: ",
-      "help": "Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):",
-      "help-g1": "1 Diffie-Hellman group 1<br>(768 bit)",
-      "help-g2": "2 Diffie-Hellman group 2<br>(1024 bit)",
-      "help-g5": "5 Diffie-Hellman group 5<br>(1536 bit)"
+      "name": "Група DH:",
+      "help": "Оберіть складність групи Diffie-Hellman для Internet Security Association and Key Management Protocol (ISAKMP):",
+      "help-g1": "1 Diffie-Hellman група<br>(768 біт)",
+      "help-g2": "2 Diffie-Hellman група<br>(1024 біт)",
+      "help-g5": "5 Diffie-Hellman група<br>(1536 біт)"
     },
-    "lifetime": "Lifetime:",
-    "destination": "IP destination router:",
-    "key": "Key:",
-    "next-btn": "Next phase",
-    "back-btn": "Show"
+    "lifetime": "Час життя:",
+    "destination": "IP роутера призначення:",
+    "key": "Ключ:",
+    "next-btn": "Далі",
+    "back-btn": "Назад"
   },
   "ph2": {
-    "title": "II phase",
+    "title": "Конфігурація фази II",
     "ipsec": {
-      "name": "IPsec setting",
-      "transform": "Transform-set:",
-      "transform-placeholder": "Name",
+      "name": "Налаштування IPsec",
+      "transform": "Набір налаштувань:",
+      "transform-placeholder": "Назва",
       "type": {
-        "name": "Type: ",
-        "help": "Set the IPSec type:",
-        "help-ah": "Authentication Header<br>(AH)<ul style='text-align: left;'><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul>",
-        "help-esp": "Encapsulation Security Payload<br>(ESP)<ul style='text-align: left;'><li>Encryption</li><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul>",
-        "help-ah-esp": "Authentication Header<br>+<br>Encapsulation Security Payload"
+        "name": "Тип: ",
+        "help": "Оберіть тип IPSec:",
+        "help-ah": "Автентифікаційний заголовок<br>(AH)<ul style='text-align: left;'><li>Автентифікація</li><li>Цілісність</li><li>Захист від Replay-атак</li></ul>",
+        "help-esp": "Інкапсуляція Захищених Корисних Даних<br>(ESP)<ul style='text-align: left;'><li>Шифрування</li><li>Автентифікація</li><li>Цілісність</li><li>Захист від Replay-атак</li></ul>",
+        "help-ah-esp": "Автентифікаційний заголовок<br>+<br>Інкапсуляція Захищених Корисних Даних"
       },
       "ah": {
-        "help": "Set the AH mode:",
-        "md": "MD5 Message Digest 5<br>(128 bit, not recommended)",
-        "sha": "SHA Secure Hash Standard<br>(160 bit)"
+        "help": "Оберіть алгоритм роботи режима Автентифікаційний заголовок:",
+        "md": "MD5 Message Digest 5<br>(128 біт, не рекомендується)",
+        "sha": "SHA Secure Hash Standard<br>(160 біт)"
       },
       "esp": {
-        "help": "Set the Encapsulation Security Payload mode:",
-        "help-des": "DES<br>Data Encryption Standard<br>(56 bit, not recommended)",
-        "help-3des": "3DES<br>Three key triple DES<br>(168 bit)",
-        "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)"
+        "help": "Оберіть алгоритм шифрування для режима Інкапсуляція Захищених Корисних Даних:",
+        "help-des": "DES<br>Data Encryption Standard<br>(56 біт, не рекомендується)",
+        "help-3des": "3DES<br>Three key triple DES<br>(168 біт)",
+        "help-aes": "AES<br>Advanced Encryption Standard<br>(128,192,256 біт, рекомендується)"
       },
       "mode": {
-        "name": "Mode: ",
-        "tunnel": "Tunnel",
-        "transport": "Transport",
-        "help": "Set the IPSec mode:",
-        "help-tun": "Tunnel<br>(Gateway-Gateway, default)",
-        "help-trans": "Transport<br>(Host-Host)"
+        "name": "Режим: ",
+        "tunnel": "Тунельний",
+        "transport": "Транспортний",
+        "help": "Оберіть режим роботи IPSec:",
+        "help-tun": "Тунельний<br>(шлюз - шлюз, за замовчуванням)",
+        "help-trans": "Транспортний<br>(хост - хост)"
       }
     },
     "acc": {
-      "title": "Access-list setting",
-      "name": "ACL-number:"
+      "title": "Налаштування списків доступа",
+      "name": "ACL-номер:"
     },
     "network": {
-      "source": "Source network:",
-      "destination": "Destination network:"
+      "source": "Вихідна мережа:",
+      "destination": "Мережа призначення:"
     },
     "map": {
-      "title": "Crypto-map setting",
-      "name": "Name/Number: ",
-      "name-place": "NAME",
-      "help": " Set the Crypto MAP name and number<br> Crypto map contain:<ul style='text-align: left;'><li>Peer info</li><li>Match address info (ACL)</li><li>Transform-set info (IPSec)</li></ul>"
+      "title": "Налаштування криптографічної карти",
+      "name": "Назва/Номер: ",
+      "name-place": "Назва",
+      "help": "Налаштуйте назву та номер Crypto-map<br>Crypto-map включає:<ul style='text-align: left;'><li>Інформація про піри</li><li>Інформація про співпадіння (ACL)</li><li>Інформація про набір налаштувань (IPSec)</li></ul>"
     },
     "int": {
-      "title": "Interface setting",
-      "name": "Interface: ",
-      "help": "Set the name of the interface that looks on the Internet side on your router"
+      "title": "Налаштування інтерфейса",
+      "name": "Інтерфейс:",
+      "help": "Задайте ім'я інтерфейса, який 'дивиться' в сторону Інтернета на вашому маршрутизаторі"
     },
-    "result-btn": "Result"
+    "result-btn": "Результат"
   },
   "result": {
-    "title": "Result:",
-    "text-name": "Text setting",
-    "text-area": "#enable // example configure text &#013;&#010;#configure terminal",
-    "down-name": "Download settings file",
-    "down-btn": "Download",
-    "down-help": "(Download config.txt file configuration)",
-    "qr": "QR code setting"
+    "title": "Результат:",
+    "text-name": "Текстові конфігурації",
+    "text-area": "#enable",
+    "down-name": "Завантажити файл конфігурацій",
+    "down-btn": "Завантажити",
+    "down-help": "(Завантажити 'config.txt' файл конфігурацій)",
+    "qr": "Конфігурації в QR-коді"
   },
   "footer": {
-    "author": "Eugene Fenko"
+    "author": "Євгеній Фенько"
   },
+  "expert": "Без підказок:",
   "links": {
-    "back": "../"
+    "back": "../",
+    "en":"/ipsec",
+    "ru":"/ipsec/ru",
+    "uk":"/ipsec/uk"
   }
 }
