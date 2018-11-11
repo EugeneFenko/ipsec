@@ -109,11 +109,18 @@
   "footer": {
     "author": "Eugene Fenko"
   },
-  "expert": "Expert mode:",
+  "expert": "Expert mode",
   "links": {
     "back": "",
     "en":"/ipsec",
     "ru":"/ipsec/ru",
     "uk":"/ipsec/uk"
+  },
+  "lang-sw": {
+    "title": "Language",
+    "active": "English",
+    "en": "<span class='active'>English</span>",
+    "ru": "<span>Russian</span>",
+    "uk": "<span>Ukrainian</span>"
   }
 }

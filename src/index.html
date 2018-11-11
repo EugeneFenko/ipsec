@@ -33,536 +33,538 @@
 </head>
 
 <body>
-            <header class="container-fluid content-center">
-                <div style="z-index:10;" id="particle"></div>
-                <div class="row" style="z-index:11;">
-                    <div class="col-12">
-                        <h1 id="logo-text">Smart IPsec
-                            <br>
-                            <div data-attr-t data-attr-t-interpolate class="messenger" id-t="lang-{{page.lang}}"></div>
-                            </span>
-                        </h1>
-                    </div>
-                    <div class="col-12 center justify-content-end">
-                        <a href="#go" class="green btn header-btn" data-t>header.button</a>
-                    </div>
-        
-        
-                </div>
-        
-        
-            </header>
-        
-            <div id="go" class="container-fluid content">
-                <form id="data-form" class="row">
-                    <div class="col-12">
-                        <div class="container content-block">
-                            <div class="row">
-                                <div class="col-12" style="margin-bottom: -10px;">
-                                    <h3 data-t>ph1.title</h3>
-                                    <hr>
-                                </div>
-                                <div id="phase1" class="col-12">
-                                    <div class="row rowFix bord-b">
-                                            <div class="col-12 col-md-3">
-                                                <span class="name-l" data-t>ph1.policy</span>
-                                            </div>
-                                            <div class="col">
-                                                <input type="number" name="policyNumber" value="1" data-attr-t data-attr-t-interpolate placeholder-t="{{ph1.policy-placeholder}}">
-                                            </div>
-                                    </div>
-        
-                                    <div class="row bord-b align-items-center ">
-                                        <div class="col-12 col-md-3 forInfo">
-        
-                                            <span class="name-l" data-t>ph1.hash.name</span>
-                                            <i class="fas fa-info-circle"></i>
-        
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
-                                                <span class="btn blue conf-btn">MD5</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha">
-                                                <span class="btn blue conf-btn">SHA
-                                                    <b class="btnRecomend">R</b>
-                                                </span>
-        
-                                            </label>
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row center">
-        
-                                                <div class="col-12" data-t>ph1.hash.help</div>
-                                                <div class="col" data-t>ph1.hash.help-md</div>
-                                                <div class="col" data-t>ph1.hash.help-sha</div>
-                                                <hr class="speedSecurityLine">
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="row bord-b align-items-center">
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l " data-t>ph1.encryption.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
-                                                <span class="btn blue conf-btn">DES</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
-                                                <span class="btn blue conf-btn">3DES</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
-                                                <span class="btn blue conf-btn">AES
-                                                    <b class="btnRecomend">R</b>
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row">
-                                                <div class="col-12" data-t>ph1.encryption.help</div>
-                                                <div class="col" data-t>ph1.encryption.help-des</div>
-                                                <div class="col" data-t>ph1.encryption.help-3des</div>
-                                                <div class="col" data-t>ph1.encryption.help-aes</div>
-                                                <hr class="speedSecurityLine">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center rowFix" id="lengthAes">
-                                        <div class="row bord-b rowFix align-items-center">
-                                            <div class="col-12 col-md-3 forInfo">
-                                                <span class="name-l " data-t>ph1.bit.name</span>
-                                                <i class="fas fa-info-circle"></i>
-                                            </div>
-                                            <div class="col center circle">
-                                                <label>
-                                                    <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
-                                                    <span class="btn blue conf-btn">128</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center circle">
-                                                <label>
-                                                    <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
-                                                    <span class="btn blue conf-btn">192</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center circle">
-                                                <label>
-                                                    <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
-                                                    <span class="btn blue conf-btn">256
-                                                        <b class="btnRecomend">R</b>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="col-12 infoBlock">
-        
-                                                <div class="row">
-                                                    <div class="col-12" data-t>ph1.bit.help</div>
-                                                    <div class="col" data-t>ph1.bit.help-128</div>
-                                                    <div class="col" data-t>ph1.bit.help-192</div>
-                                                    <div class="col" data-t>ph1.bit.help-256</div>
-                                                    <hr class="speedSecurityLine">
-                                                </div>
-        
-        
-                                            </div>
-                                        </div>
-        
-                                    </div>
-        
-        
-                                    <div class="row bord-b align-items-center">
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l " data-t>ph1.group.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
-                                                <span class="btn blue conf-btn">1</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
-                                                <span class="btn blue conf-btn">2</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center circle">
-                                            <label>
-                                                <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
-                                                <span class="btn blue conf-btn">5
-                                                    <b class="btnRecomend">R</b>
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row">
-                                                <div class="col-12" data-t>ph1.group.help</div>
-                                                <div class="col" data-t>ph1.group.help-g1</div>
-                                                <div class="col" data-t>ph1.group.help-g2</div>
-                                                <div class="col" data-t>ph1.group.help-g5</div>
-                                                <hr class="speedSecurityLine">
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="row align-items-center">
-                                        <div class="col-12 col-md-4 center ">
-                                            <span class="name-l " data-t>ph1.lifetime</span>
-                                            <input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
-                                        </div>
-        
-                                        <div class="col-12 col-md-4 center ">
-                                            <span class="name-l " data-t>ph1.destination</span>
-                                            <input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
-                                        </div>
-        
-                                        <div class="col-12 col-md-4 center">
-                                            <span class="name-l " data-t>ph1.key</span>
-                                            <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
-                                        </div>
-                                    </div>
-        
-                                    <div class="row no-gutters justify-content-center">
-                                        <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" data-attr-t data-attr-t-interpolate value-t="{{ph1.next-btn}}">
-                                    </div>
-                                </div>
-                                <div class="col-12 center" id="show-1phase-btn">
-                                    <input type="button" data-attr-t data-attr-t-interpolate value-t="{{ph1.back-btn}}" class="btn orange col-12 col-md-2" name="click">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-12" id="phase2">
-                        <div class="container content-block">
-                            <div class="row">
-        
-                                <div class="col-12">
-                                    <h3 data-t>ph2.title</h3>
-                                    <hr>
-                                </div>
-                                <div class="col-12">
-        
-                                    <div class="col-12">
-                                        <h3 data-t>ph2.ipsec.name</h3>
-                                        <hr>
-                                    </div>
-        
-        
-                                    <div class="row rowFix">
-                                        <div class="col-12 col-md-3">
-                                            <span class="name-l" data-t>ph2.ipsec.transform</span>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="transformName" value="" data-attr-t data-attr-t-interpolate placeholder-t="{{ph2.ipsec.transform-placeholder}}">
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="row bord-b align-items-center">
-        
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l" data-t>ph2.ipsec.type.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col center">
-                                            <label>
-                                                <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
-                                                <span class="btn blue conf-btn">AH</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center">
-                                            <label>
-                                                <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
-                                                <span class="btn blue conf-btn">ESP</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center">
-                                            <label>
-                                                <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
-                                                <span class="btn blue conf-btn">AH/ESP</span>
-                                            </label>
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row">
-                                                <div class="col-12" data-t>ph2.ipsec.type.help</div>
-                                                <div class="col" data-t>ph2.ipsec.type.help-ah</div>
-                                                <div class="col" data-t>ph2.ipsec.type.help-esp</div>
-                                                <div class="col" data-t>ph2.ipsec.type.help-ah-esp</div>
-                                                <hr class="speedSecurityLine">
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div id="AH">
-                                        <div class="row bord-b align-items-center">
-                                            <div class="col-12 col-md-3 forInfo">
-                                                <span class="name-l">AH: </span>
-                                                <i class="fas fa-info-circle"></i>
-                                            </div>
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
-                                                    <span class="btn blue conf-btn">MD5</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
-                                                    <span class="btn blue conf-btn">SHA</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-12 infoBlock">
-                                                <div class="row">
-                                                    <div class="col-12" data-t>ph2.ipsec.ah.help</div>
-                                                    <div class="col" data-t>ph2.ipsec.ah.md</div>
-                                                    <div class="col" data-t>ph2.ipsec.ah.sha</div>
-                                                    <hr class="speedSecurityLine">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div id="ESP">
-                                        <div class="row bord-b align-items-center">
-                                            <div class="col-12 col-md-3 forInfo">
-                                                <span class="name-l">ESP: </span>
-                                                <i class="fas fa-info-circle"></i>
-                                            </div>
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
-                                                    <span class="btn blue conf-btn">DES</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
-                                                    <span class="btn blue conf-btn">3DES</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
-                                                    <span class="btn blue conf-btn">AES</span>
-                                                </label>
-                                            </div>
-                                            +
-                                            <div class="col center">
-                                                <label>
-                                                    <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
-                                                    <span class="btn yellow conf-btn">MD5</span>
-                                                </label>
-                                            </div>
-                                            <div class="col center ">
-                                                <label>
-                                                    <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
-                                                    <span class="btn yellow conf-btn">SHA</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-12 infoBlock">
-                                                <div class="row">
-                                                    <div class="col-12" data-t>ph2.ipsec.esp.help</div>
-                                                    <div class="col" data-t>ph2.ipsec.esp.help-des</div>
-                                                    <div class="col" data-t>ph2.ipsec.esp.help-3des</div>
-                                                    <div class="col" data-t>ph2.ipsec.esp.help-aes</div>
-                                                    <hr class="speedSecurityLine">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="row bord-b align-items-center">
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l" data-t>ph2.ipsec.mode.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col center">
-                                            <label>
-                                                <input type="radio" name="ipsecMode" id="p2-tunnel" class="conf-input" value="tunnel">
-                                                <span class="btn blue conf-btn" data-t>ph2.ipsec.mode.tunnel</span>
-                                            </label>
-                                        </div>
-                                        <div class="col center">
-                                            <label>
-                                                <input type="radio" name="ipsecMode" id="p2-transport" class="conf-input" value="transport">
-                                                <span class="btn blue conf-btn" data-t>ph2.ipsec.mode.transport</span>
-                                            </label>
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row">
-                                                <div class="col-12" data-t>ph2.ipsec.mode.help</div>
-                                                <div class="col" data-t>ph2.ipsec.mode.help-tun</div>
-                                                <div class="col" data-t>ph2.ipsec.mode.help-trans</div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-12 mrg-top-50">
-                                        <h3 data-t>ph2.acc.title</h3>
-                                        <hr>
-                                    </div>
-        
-                                    <div class="row">
-                                        <div class="col-12 col-md-3">
-                                            <span class="name-l" data-t>ph2.acc.name</span>
-                                        </div>
-                                        <div class="col">
-                                            <input type="number" name="numberAcl" value="" placeholder="100-199">
-                                        </div>
-                                    </div>
-        
-                                    <div class="row">
-                                        <div class="col-12 col-md-3">
-                                            <span class="name-l" data-t>ph2.network.source</span>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
-                                        </div>
-                                    </div>
-        
-                                    <div class="row">
-                                        <div class="col-12 col-md-3">
-                                            <span class="name-l" data-t>ph2.network.destination</span>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="destMask" value="" placeholder="0.0.0.255">
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="col-12 mrg-top-50">
-                                        <h3 data-t>ph2.map.title</h3>
-                                        <hr>
-                                    </div>
-        
-                                    <div class="row rowFix">
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l" data-t>ph2.map.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="mapName" value="" data-attr-t data-attr-t-interpolate placeholder-t="{{ph2.map.name-place}}">
-                                        </div>
-                                        <div class="col">
-                                            <input type="number" name="mapNumber" value="" placeholder="1-65535">
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row">
-                                                <div class="col-12" data-t>ph2.map.help</div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="col-12 mrg-top-50">
-                                        <h3 data-t>ph2.int.title</h3>
-                                        <hr>
-                                    </div>
-        
-                                    <div class="row rowFix">
-                                        <div class="col-12 col-md-3 forInfo">
-                                            <span class="name-l" data-t>ph2.int.name</span>
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                        <div class="col">
-                                            <input type="text" name="interfaceName" value="" placeholder="fa0/0">
-                                        </div>
-                                        <div class="col-12 infoBlock">
-                                            <div class="row align-items-center">
-                                                <div class="col-12" data-t>ph2.int.help</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="button" class="btn green col-12 col-md-3" id="result-btn" data-attr-t data-attr-t-interpolate value-t="{{ph2.result-btn}}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-        
-                    <div class="col-12 result-block">
-                        <div class="container content-block">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="name-l" data-t>result.title</h3>
-                                    <hr>
-                                </div>
-                                <div id="result" class="col-12">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-4">
-                                            <span class="name-l" data-t>result.text-name</span>
-                                            <hr>
-        
-                                            <textarea id="result-output" rows="8" cols="24" data-t>result.text-area</textarea>
-                                        </div>
-                                        <div class="col-sm-12 col-md-4">
-                                            <span class="name-l" data-t>result.down-name</span>
-                                            <hr>
-                                            <div id="downBtn" class="btn green" data-t>result.down-btn</div>
-                                            <p style="font-size: 1rem; margin: 15px;" data-t>result.down-help</p>
-                                        </div>
-                                        <div class="col-sm-12 col-md-4">
-                                            <span class="name-l" data-t>result.qr</span>
-                                            <hr>
-                                            <div id="qr"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-        
-        
+    <header class="container-fluid content-center">
+        <div style="z-index:10;" id="particle"></div>
+        <div class="row" style="z-index:11;">
+            <div class="col-12">
+                <h1 id="logo-text">Smart IPsec
+                    <br>
+                    <div data-attr-t data-attr-t-interpolate class="messenger" id-t="lang-{{page.lang}}"></div>
+                    </span>
+                </h1>
             </div>
-        
-            <footer class="container-fluid">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                        <p><a href="https://eugenefenko.github.io/" data-t>footer.author</a> | 2017</p>
+            <div class="col-12 center justify-content-end">
+                <a href="#go" class="green btn header-btn" data-t>header.button</a>
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+    <div id="go" class="container-fluid content">
+        <form id="data-form" class="row">
+            <div class="col-12">
+                <div class="container content-block">
+                    <div class="row">
+                        <div class="col-12" style="margin-bottom: -10px;">
+                            <h3 data-t>ph1.title</h3>
+                            <hr>
+                        </div>
+                        <div id="phase1" class="col-12">
+                            <div class="row rowFix bord-b">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l" data-t>ph1.policy</span>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="policyNumber" value="1" data-attr-t data-attr-t-interpolate placeholder-t="{{ph1.policy-placeholder}}">
+                                </div>
+                            </div>
+
+                            <div class="row bord-b align-items-center ">
+                                <div class="col-12 col-md-3 forInfo">
+
+                                    <span class="name-l" data-t>ph1.hash.name</span>
+                                    <i class="fas fa-info-circle"></i>
+
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
+                                        <span class="btn blue conf-btn">MD5</span>
+                                    </label>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha">
+                                        <span class="btn blue conf-btn">SHA
+                                            <b class="btnRecomend">R</b>
+                                        </span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row center">
+
+                                        <div class="col-12" data-t>ph1.hash.help</div>
+                                        <div class="col" data-t>ph1.hash.help-md</div>
+                                        <div class="col" data-t>ph1.hash.help-sha</div>
+                                        <hr class="speedSecurityLine">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l " data-t>ph1.encryption.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
+                                        <span class="btn blue conf-btn">DES</span>
+                                    </label>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
+                                        <span class="btn blue conf-btn">3DES</span>
+                                    </label>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
+                                        <span class="btn blue conf-btn">AES
+                                            <b class="btnRecomend">R</b>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12" data-t>ph1.encryption.help</div>
+                                        <div class="col" data-t>ph1.encryption.help-des</div>
+                                        <div class="col" data-t>ph1.encryption.help-3des</div>
+                                        <div class="col" data-t>ph1.encryption.help-aes</div>
+                                        <hr class="speedSecurityLine">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center rowFix" id="lengthAes">
+                                <div class="row bord-b rowFix align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l " data-t>ph1.bit.name</span>
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                            <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
+                                            <span class="btn blue conf-btn">128</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                            <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
+                                            <span class="btn blue conf-btn">192</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center circle">
+                                        <label>
+                                            <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
+                                            <span class="btn blue conf-btn">256
+                                                <b class="btnRecomend">R</b>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 infoBlock">
+
+                                        <div class="row">
+                                            <div class="col-12" data-t>ph1.bit.help</div>
+                                            <div class="col" data-t>ph1.bit.help-128</div>
+                                            <div class="col" data-t>ph1.bit.help-192</div>
+                                            <div class="col" data-t>ph1.bit.help-256</div>
+                                            <hr class="speedSecurityLine">
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l " data-t>ph1.group.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
+                                        <span class="btn blue conf-btn">1</span>
+                                    </label>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
+                                        <span class="btn blue conf-btn">2</span>
+                                    </label>
+                                </div>
+                                <div class="col center circle">
+                                    <label>
+                                        <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
+                                        <span class="btn blue conf-btn">5
+                                            <b class="btnRecomend">R</b>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12" data-t>ph1.group.help</div>
+                                        <div class="col" data-t>ph1.group.help-g1</div>
+                                        <div class="col" data-t>ph1.group.help-g2</div>
+                                        <div class="col" data-t>ph1.group.help-g5</div>
+                                        <hr class="speedSecurityLine">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-4 center ">
+                                    <span class="name-l " data-t>ph1.lifetime</span>
+                                    <input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
+                                </div>
+
+                                <div class="col-12 col-md-4 center ">
+                                    <span class="name-l " data-t>ph1.destination</span>
+                                    <input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
+                                </div>
+
+                                <div class="col-12 col-md-4 center">
+                                    <span class="name-l " data-t>ph1.key</span>
+                                    <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
+                                </div>
+                            </div>
+
+                            <div class="row no-gutters justify-content-center">
+                                <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" data-attr-t data-attr-t-interpolate value-t="{{ph1.next-btn}}">
+                            </div>
+                        </div>
+                        <div class="col-12 center" id="show-1phase-btn">
+                            <input type="button" data-attr-t data-attr-t-interpolate value-t="{{ph1.back-btn}}" class="btn orange col-12 col-md-2" name="click">
+                        </div>
                     </div>
                 </div>
-            </footer>
-        
-            <div class="container-fluid toolBox">
-                <div class="row">
-                    <div class="col-5 toolBox_content align-middle">
-                        <sapn>
-                            <span data-t="expert"></span>
-                            <label class="tgl tgl-gray align-middle" id="btnExpert">
-                                <input id='expI_O' type="checkbox" />
-                                <span>&nbsp;&nbsp;</span>
-                            </label>
-                        </sapn>
+            </div>
+
+            <div class="col-12" id="phase2">
+                <div class="container content-block">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h3 data-t>ph2.title</h3>
+                            <hr>
+                        </div>
+                        <div class="col-12">
+
+                            <div class="col-12">
+                                <h3 data-t>ph2.ipsec.name</h3>
+                                <hr>
+                            </div>
+
+
+                            <div class="row rowFix">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l" data-t>ph2.ipsec.transform</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="transformName" value="" data-attr-t data-attr-t-interpolate placeholder-t="{{ph2.ipsec.transform-placeholder}}">
+                                </div>
+                            </div>
+
+
+                            <div class="row bord-b align-items-center">
+
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l" data-t>ph2.ipsec.type.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">ESP</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
+                                        <span class="btn blue conf-btn">AH/ESP</span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12" data-t>ph2.ipsec.type.help</div>
+                                        <div class="col" data-t>ph2.ipsec.type.help-ah</div>
+                                        <div class="col" data-t>ph2.ipsec.type.help-esp</div>
+                                        <div class="col" data-t>ph2.ipsec.type.help-ah-esp</div>
+                                        <hr class="speedSecurityLine">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="AH">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l">AH: </span>
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
+                                            <span class="btn blue conf-btn">MD5</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
+                                            <span class="btn blue conf-btn">SHA</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 infoBlock">
+                                        <div class="row">
+                                            <div class="col-12" data-t>ph2.ipsec.ah.help</div>
+                                            <div class="col" data-t>ph2.ipsec.ah.md</div>
+                                            <div class="col" data-t>ph2.ipsec.ah.sha</div>
+                                            <hr class="speedSecurityLine">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="ESP">
+                                <div class="row bord-b align-items-center">
+                                    <div class="col-12 col-md-3 forInfo">
+                                        <span class="name-l">ESP: </span>
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
+                                            <span class="btn blue conf-btn">DES</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
+                                            <span class="btn blue conf-btn">3DES</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
+                                            <span class="btn blue conf-btn">AES</span>
+                                        </label>
+                                    </div>
+                                    +
+                                    <div class="col center">
+                                        <label>
+                                            <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
+                                            <span class="btn yellow conf-btn">MD5</span>
+                                        </label>
+                                    </div>
+                                    <div class="col center ">
+                                        <label>
+                                            <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
+                                            <span class="btn yellow conf-btn">SHA</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 infoBlock">
+                                        <div class="row">
+                                            <div class="col-12" data-t>ph2.ipsec.esp.help</div>
+                                            <div class="col" data-t>ph2.ipsec.esp.help-des</div>
+                                            <div class="col" data-t>ph2.ipsec.esp.help-3des</div>
+                                            <div class="col" data-t>ph2.ipsec.esp.help-aes</div>
+                                            <hr class="speedSecurityLine">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row bord-b align-items-center">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l" data-t>ph2.ipsec.mode.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="ipsecMode" id="p2-tunnel" class="conf-input" value="tunnel">
+                                        <span class="btn blue conf-btn" data-t>ph2.ipsec.mode.tunnel</span>
+                                    </label>
+                                </div>
+                                <div class="col center">
+                                    <label>
+                                        <input type="radio" name="ipsecMode" id="p2-transport" class="conf-input" value="transport">
+                                        <span class="btn blue conf-btn" data-t>ph2.ipsec.mode.transport</span>
+                                    </label>
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12" data-t>ph2.ipsec.mode.help</div>
+                                        <div class="col" data-t>ph2.ipsec.mode.help-tun</div>
+                                        <div class="col" data-t>ph2.ipsec.mode.help-trans</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mrg-top-50">
+                                <h3 data-t>ph2.acc.title</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l" data-t>ph2.acc.name</span>
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="numberAcl" value="" placeholder="100-199">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l" data-t>ph2.network.source</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="name-l" data-t>ph2.network.destination</span>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="destMask" value="" placeholder="0.0.0.255">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 mrg-top-50">
+                                <h3 data-t>ph2.map.title</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row rowFix">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l" data-t>ph2.map.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="mapName" value="" data-attr-t data-attr-t-interpolate placeholder-t="{{ph2.map.name-place}}">
+                                </div>
+                                <div class="col">
+                                    <input type="number" name="mapNumber" value="" placeholder="1-65535">
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row">
+                                        <div class="col-12" data-t>ph2.map.help</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 mrg-top-50">
+                                <h3 data-t>ph2.int.title</h3>
+                                <hr>
+                            </div>
+
+                            <div class="row rowFix">
+                                <div class="col-12 col-md-3 forInfo">
+                                    <span class="name-l" data-t>ph2.int.name</span>
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="interfaceName" value="" placeholder="fa0/0">
+                                </div>
+                                <div class="col-12 infoBlock">
+                                    <div class="row align-items-center">
+                                        <div class="col-12" data-t>ph2.int.help</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" class="btn green col-12 col-md-3" id="result-btn" data-attr-t data-attr-t-interpolate value-t="{{ph2.result-btn}}">
+                        </div>
                     </div>
-                    <div class="col-2 forkMe d-flex justify-content-center">
-                        <a target="_blank" href="https://github.com/EugeneFenko/ipsec">
-                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjcyIDE0NzJxMC00MC0yOC02OHQtNjgtMjgtNjggMjgtMjggNjggMjggNjggNjggMjggNjgtMjggMjgtNjh6bTAtMTE1MnEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptNjQwIDEyOHEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptOTYgMHEwIDUyLTI2IDk2LjV0LTcwIDY5LjVxLTIgMjg3LTIyNiA0MTQtNjggMzgtMjAzIDgxLTEyOCA0MC0xNjkuNSA3MXQtNDEuNSAxMDB2MjZxNDQgMjUgNzAgNjkuNXQyNiA5Ni41cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNnEwLTUyIDI2LTk2LjV0NzAtNjkuNXYtODIwcS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2cTAgNTItMjYgOTYuNXQtNzAgNjkuNXY0OTdxNTQtMjYgMTU0LTU3IDU1LTE3IDg3LjUtMjkuNXQ3MC41LTMxIDU5LTM5LjUgNDAuNS01MSAyOC02OS41IDguNS05MS41cS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2eiIvPjwvc3ZnPg==" alt="Fork Me">
-                        </a>
+                </div>
+            </div>
+
+
+            <div class="col-12 result-block">
+                <div class="container content-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="name-l" data-t>result.title</h3>
+                            <hr>
+                        </div>
+                        <div id="result" class="col-12">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <span class="name-l" data-t>result.text-name</span>
+                                    <hr>
+
+                                    <textarea id="result-output" rows="8" cols="24" data-t>result.text-area</textarea>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <span class="name-l" data-t>result.down-name</span>
+                                    <hr>
+                                    <div id="downBtn" class="btn green" data-t>result.down-btn</div>
+                                    <p style="font-size: 1rem; margin: 15px;" data-t>result.down-help</p>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <span class="name-l" data-t>result.qr</span>
+                                    <hr>
+                                    <div id="qr"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-5 lng-sw">
-                        <div class="uk">
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <p>
+                    <a href="https://eugenefenko.github.io/" data-t>footer.author</a> | 2017</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid toolBox">
+        <div class="row">
+            <div class="col-5 toolBox_content align-middle">
+                <sapn>
+                    <span data-t="expert"></span>
+                    <label class="tgl tgl-gray align-middle" id="btnExpert">
+                        <input id='expI_O' type="checkbox" />
+                        <span>&nbsp;&nbsp;</span>
+                    </label>
+                </sapn>
+            </div>
+            <div class="col-2 forkMe d-flex justify-content-center">
+                <a target="_blank" href="https://github.com/EugeneFenko/ipsec">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjcyIDE0NzJxMC00MC0yOC02OHQtNjgtMjgtNjggMjgtMjggNjggMjggNjggNjggMjggNjgtMjggMjgtNjh6bTAtMTE1MnEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptNjQwIDEyOHEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptOTYgMHEwIDUyLTI2IDk2LjV0LTcwIDY5LjVxLTIgMjg3LTIyNiA0MTQtNjggMzgtMjAzIDgxLTEyOCA0MC0xNjkuNSA3MXQtNDEuNSAxMDB2MjZxNDQgMjUgNzAgNjkuNXQyNiA5Ni41cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNnEwLTUyIDI2LTk2LjV0NzAtNjkuNXYtODIwcS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2cTAgNTItMjYgOTYuNXQtNzAgNjkuNXY0OTdxNTQtMjYgMTU0LTU3IDU1LTE3IDg3LjUtMjkuNXQ3MC41LTMxIDU5LTM5LjUgNDAuNS01MSAyOC02OS41IDguNS05MS41cS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2eiIvPjwvc3ZnPg=="
+                        alt="Fork Me">
+                </a>
+            </div>
+            <div class="col-5 lng-sw">
+                <!-- <div class="uk">
                             <a data-attr-t-interpolate data-attr-t href-t="{{links.uk}}">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
                             </a>
@@ -576,14 +578,47 @@
                             <a data-attr-t-interpolate data-attr-t href-t="{{links.en}}">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAABT0lEQVRIS2PMFlaJ3SwbPO8dqwgLAwgwM4Ephr//IDQRfCYONobqI7kQ9cSDl///M6QyyhmU/37LKAixnEzAyM7KUHummBzdLxl5TLv////zl2HnvBQGRkYGhpiGC2CDFtcbEM1nZmNhODXXgiQHTJm3FKwe7oBd81MYGBkYGKKhDljSYEA0n5mVheHUPHIdYNH7///P3wxi8iYk+xzmZVZudoZtpyJJCoG1959AQwDNAaT4HGYjGzc7w1ayHTCaBkbTwGgaQEsDJGVmqGKKygE+h8n///34xSAhZ8zA8J+BgYmNGVwC/v39l2g+Oy8Hw/q9gSS5HV4QNU2c+5+dnY0hNTqUJAMoVQyvCwbcAZ0soIBnYAhWlKHUUyTph0fBgDtgwKNgwB3QycLwgoGBQZykCKSe4meMHcwMvoyMDHMYGBjEqGcuUSY9+/+fIQMA7YEh8yRPGe0AAAAASUVORK5CYII=" alt="" srcset="">
                             </a>
-                        </div>
-                    </div>
+                        </div> -->
+                <div class="sl-nav">
+                    <span data-t data-attr-t>lang-sw.title</span>
+                    <ul>
+                        <li>
+                            <b data-t data-attr-t>lang-sw.active</b>
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                            <div class="triangle"></div>
+                            <ul>
+                                <li>
+                                    <a data-attr-t-interpolate data-attr-t href-t="{{links.en}}">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAABT0lEQVRIS2PMFlaJ3SwbPO8dqwgLAwgwM4Ephr//IDQRfCYONobqI7kQ9cSDl///M6QyyhmU/37LKAixnEzAyM7KUHummBzdLxl5TLv////zl2HnvBQGRkYGhpiGC2CDFtcbEM1nZmNhODXXgiQHTJm3FKwe7oBd81MYGBkYGKKhDljSYEA0n5mVheHUPHIdYNH7///P3wxi8iYk+xzmZVZudoZtpyJJCoG1959AQwDNAaT4HGYjGzc7w1ayHTCaBkbTwGgaQEsDJGVmqGKKygE+h8n///34xSAhZ8zA8J+BgYmNGVwC/v39l2g+Oy8Hw/q9gSS5HV4QNU2c+5+dnY0hNTqUJAMoVQyvCwbcAZ0soIBnYAhWlKHUUyTph0fBgDtgwKNgwB3QycLwgoGBQZykCKSe4meMHcwMvoyMDHMYGBjEqGcuUSY9+/+fIQMA7YEh8yRPGe0AAAAASUVORK5CYII=" alt="" srcset="">
+                                        <div data-t data-attr-t>lang-sw.en</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-attr-t-interpolate data-attr-t href-t="{{links.ru}}">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAo0lEQVRIS2PcuO+I+u07D/d/+/5DkoGOgIuT47mqirwjY8+spc/obTnMnyBHMDZNnPsfJFCcHkdH/zMw9M5cBLZv1AGjITDwIcCoWf+fhZWNwcotnq654NDW2ZBcMOqA0RAYDYEBD4HlAgzg2tBaRoKu5cDRJy8g5cCoA0ZDYDCEwGUGBgYdumYBhGXnGZdxM4gzsTHs+/+fQYvOjjj//zeDJwBxf34P7r+YUwAAAABJRU5ErkJggg==" alt="" srcset="">
+                         
+                                        <div data-t data-attr-t>lang-sw.ru</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-attr-t-interpolate data-attr-t href-t="{{links.uk}}">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
+                           
+                                        <div data-t data-attr-t>lang-sw.uk</div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
+        </div>
+    </div>
 
 
-  
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script data-attr-t data-attr-t-interpolate src-t="{{links.back}}js/qrcode.min.js"></script>

@@ -109,11 +109,18 @@
   "footer": {
     "author": "Євгеній Фенько"
   },
-  "expert": "Без підказок:",
+  "expert": "Без підказок",
   "links": {
     "back": "../",
     "en":"/ipsec",
     "ru":"/ipsec/ru",
     "uk":"/ipsec/uk"
+  },
+  "lang-sw": {
+    "title": "Мова",
+    "active": "Українська",
+    "en": "<span>Англійська</span>",
+    "ru": "<span>Російська</span>",
+    "uk": "<span class='active'>Українська</span>"
   }
 }
