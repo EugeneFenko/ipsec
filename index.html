@@ -4,622 +4,649 @@
 
 <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38749006-4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38749006-4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-        gtag('config', 'UA-38749006-4');
-    </script>
+		gtag('config', 'UA-38749006-4');
+	</script>
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Smart IPSec</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>Smart IPSec</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/custom.css">
 
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <header class="container-fluid content-center">
-        <div style="z-index:10;" id="particle"></div>
-        <div class="row" style="z-index:11;">
-            <div class="col-12">
-                <h1 id="logo-text">Smart IPsec
-                    <br>
-                    <div class="messenger" id="lang-en"></div>
-                    
-                </h1>
-            </div>
-            <div class="col-12 center justify-content-end">
-                <a href="#go" class="green btn header-btn">🚀 Create configuration</a>
-            </div>
+	<header class="container-fluid content-center">
+		<div style="z-index:10;" id="particle"></div>
+		<div class="row" style="z-index:11;">
+			<div class="col-12">
+				<h1 id="logo-text">Smart IPsec
+					<br>
+					<div class="messenger" id="lang-en"></div>
+					
+				</h1>
+			</div>
+			<div class="col-12 center justify-content-end">
+				<a href="#go" onclick="showConfig()" class="green btn header-btn">🚀 Create configuration</a>
+				<a href="#calc" onclick="showCalc()" class="green btn header-btn">🚀 Decryption time</a>
+			</div>
 
 
-        </div>
+		</div>
 
 
-    </header>
+	</header>
 
-    <div id="go" class="container-fluid content">
-        <form id="data-form" class="row">
-            <div class="col-12">
-                <div class="container content-block">
-                    <div class="row">
-                        <div class="col-12" style="margin-bottom: -10px;">
-                            <h3>I phase</h3>
-                            <hr>
-                        </div>
-                        <div id="phase1" class="col-12">
-                            <div class="row rowFix bord-b">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Policy number:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="number" name="policyNumber" value="1" placeholder="Number/Priority (1 - 10000)">
-                                </div>
-                            </div>
+	<div id="go" class="container-fluid content">
+		<form id="data-form" class="row">
+			<div class="col-12">
+				<div class="container content-block">
+					<div class="row">
+						<div class="col-12" style="margin-bottom: -10px;">
+							<h3>I phase</h3>
+							<hr>
+						</div>
+						<div id="phase1" class="col-12">
+							<div class="row rowFix bord-b">
+								<div class="col-12 col-md-3">
+									<span class="name-l">Policy number:</span>
+								</div>
+								<div class="col">
+									<input type="number" name="policyNumber" value="1" placeholder="Number/Priority (1 - 10000)">
+								</div>
+							</div>
 
-                            <div class="row bord-b align-items-center ">
-                                <div class="col-12 col-md-3 forInfo">
+							<div class="row bord-b align-items-center ">
+								<div class="col-12 col-md-3 forInfo">
 
-                                    <span class="name-l">Hash: </span>
-                                    <i class="fas fa-info-circle"></i>
+									<span class="name-l">Hash: </span>
+									<i class="fas fa-info-circle"></i>
 
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
-                                        <span class="btn blue conf-btn">MD5</span>
-                                    </label>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha">
-                                        <span class="btn blue conf-btn">SHA
-                                            <b class="btnRecomend">R</b>
-                                        </span>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="hash" id="p1-md5" class="conf-input" value="md5">
+										<span class="btn blue conf-btn">MD5</span>
+									</label>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="hash" id="p1-sha" class="conf-input" value="sha">
+										<span class="btn blue conf-btn">SHA
+											<b class="btnRecomend">R</b>
+										</span>
 
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row center">
+									</label>
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row center">
 
-                                        <div class="col-12">Set hash algorithm for Internet Security Association and Key Management Protocol (ISAKMP):</div>
-                                        <div class="col">MD5 Message Digest 5 <br> (128 bit, not recommended)</div>
-                                        <div class="col">SHA Secure Hash Standard <br> (160 bit)</div>
-                                        <hr class="speedSecurityLine">
-                                    </div>
-                                </div>
-                            </div>
+										<div class="col-12">Set hash algorithm for Internet Security Association and Key Management Protocol (ISAKMP):</div>
+										<div class="col">MD5 Message Digest 5 <br> (128 bit, not recommended)</div>
+										<div class="col">SHA Secure Hash Standard <br> (160 bit)</div>
+										<hr class="speedSecurityLine">
+									</div>
+								</div>
+							</div>
 
-                            <div class="row bord-b align-items-center">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l ">Encryption: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
-                                        <span class="btn blue conf-btn">DES</span>
-                                    </label>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
-                                        <span class="btn blue conf-btn">3DES</span>
-                                    </label>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
-                                        <span class="btn blue conf-btn">AES
-                                            <b class="btnRecomend">R</b>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">Set encryption algorithm for Internet Security Association and Key Management Protocol (ISAKMP):</div>
-                                        <div class="col">DES<br>Data Encryption Standard<br>(56 bit, not recommended)</div>
-                                        <div class="col">3DES<br>Three key triple DES<br>(168 bit)</div>
-                                        <div class="col">AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)</div>
-                                        <hr class="speedSecurityLine">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row align-items-center rowFix" id="lengthAes">
-                                <div class="row bord-b rowFix align-items-center">
-                                    <div class="col-12 col-md-3 forInfo">
-                                        <span class="name-l ">Key lenght:</span>
-                                        <i class="fas fa-info-circle"></i>
-                                    </div>
-                                    <div class="col center circle">
-                                        <label>
-                                            <input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
-                                            <span class="btn blue conf-btn">128</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center circle">
-                                        <label>
-                                            <input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
-                                            <span class="btn blue conf-btn">192</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center circle">
-                                        <label>
-                                            <input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
-                                            <span class="btn blue conf-btn">256
-                                                <b class="btnRecomend">R</b>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="col-12 infoBlock">
+							<div class="row bord-b align-items-center">
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l ">Encryption: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="encryption" id="p1-des" class="conf-input" value="des">
+										<span class="btn blue conf-btn">DES</span>
+									</label>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="encryption" id="p1-3des" class="conf-input" value="3des">
+										<span class="btn blue conf-btn">3DES</span>
+									</label>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="encryption" id="p1-aes" class="conf-input" value="aes">
+										<span class="btn blue conf-btn">AES
+											<b class="btnRecomend">R</b>
+										</span>
+									</label>
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row">
+										<div class="col-12">Set encryption algorithm for Internet Security Association and Key Management Protocol (ISAKMP):</div>
+										<div class="col">DES<br>Data Encryption Standard<br>(56 bit, not recommended)</div>
+										<div class="col">3DES<br>Three key triple DES<br>(168 bit)</div>
+										<div class="col">AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)</div>
+										<hr class="speedSecurityLine">
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-center rowFix" id="lengthAes">
+								<div class="row bord-b rowFix align-items-center">
+									<div class="col-12 col-md-3 forInfo">
+										<span class="name-l ">Key lenght:</span>
+										<i class="fas fa-info-circle"></i>
+									</div>
+									<div class="col center circle">
+										<label>
+											<input type="radio" name="keyLength" id="p1-aes-128" class="conf-input" value="128">
+											<span class="btn blue conf-btn">128</span>
+										</label>
+									</div>
+									<div class="col center circle">
+										<label>
+											<input type="radio" name="keyLength" id="p1-aes-192" class="conf-input" value="192">
+											<span class="btn blue conf-btn">192</span>
+										</label>
+									</div>
+									<div class="col center circle">
+										<label>
+											<input type="radio" name="keyLength" id="p1-aes-256" class="conf-input" value="256">
+											<span class="btn blue conf-btn">256
+												<b class="btnRecomend">R</b>
+											</span>
+										</label>
+									</div>
+									<div class="col-12 infoBlock">
 
-                                        <div class="row">
-                                            <div class="col-12">Set key lenght for AES:</div>
-                                            <div class="col">128 bit key lenght</div>
-                                            <div class="col">192 bit key lenght</div>
-                                            <div class="col">256 bit key lenght</div>
-                                            <hr class="speedSecurityLine">
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                            </div>
+										<div class="row">
+											<div class="col-12">Set key lenght for AES:</div>
+											<div class="col">128 bit key lenght</div>
+											<div class="col">192 bit key lenght</div>
+											<div class="col">256 bit key lenght</div>
+											<hr class="speedSecurityLine">
+										</div>
 
 
-                            <div class="row bord-b align-items-center">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l ">Group DH: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
-                                        <span class="btn blue conf-btn">1</span>
-                                    </label>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
-                                        <span class="btn blue conf-btn">2</span>
-                                    </label>
-                                </div>
-                                <div class="col center circle">
-                                    <label>
-                                        <input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
-                                        <span class="btn blue conf-btn">5
-                                            <b class="btnRecomend">R</b>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):</div>
-                                        <div class="col">1 Diffie-Hellman group 1<br>(768 bit)</div>
-                                        <div class="col">2 Diffie-Hellman group 2<br>(1024 bit)</div>
-                                        <div class="col">5 Diffie-Hellman group 5<br>(1536 bit)</div>
-                                        <hr class="speedSecurityLine">
-                                    </div>
-                                </div>
-                            </div>
+									</div>
+								</div>
 
-                            <div class="row align-items-center">
-                                <div class="col-12 col-md-4 center ">
-                                    <span class="name-l ">Lifetime:</span>
-                                    <input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
-                                </div>
-
-                                <div class="col-12 col-md-4 center ">
-                                    <span class="name-l ">IP destination router:</span>
-                                    <input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
-                                </div>
-
-                                <div class="col-12 col-md-4 center">
-                                    <span class="name-l ">Key:</span>
-                                    <input type="password" name="key" placeholder="Str0nG_pAssWoRd">
-                                </div>
-                            </div>
-
-                            <div class="row no-gutters justify-content-center">
-                                <input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" value="Next">
-                            </div>
-                        </div>
-                        <div class="col-12 center" id="show-1phase-btn">
-                            <input type="button" class="btn orange col-12 col-md-2" name="click" value="Back">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12" id="phase2">
-                <div class="container content-block">
-                    <div class="row">
-
-                        <div class="col-12">
-                            <h3>II phase</h3>
-                            <hr>
-                        </div>
-                        <div class="col-12">
-
-                            <div class="col-12">
-                                <h3>IPsec setting</h3>
-                                <hr>
-                            </div>
+							</div>
 
 
-                            <div class="row rowFix">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Transform-set:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="transformName" value="" placeholder="Name">
-                                </div>
-                            </div>
+							<div class="row bord-b align-items-center">
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l ">Group DH: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="group" id="p1-dh-1" class="conf-input" value="1">
+										<span class="btn blue conf-btn">1</span>
+									</label>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="group" id="p1-dh-2" class="conf-input" value="2">
+										<span class="btn blue conf-btn">2</span>
+									</label>
+								</div>
+								<div class="col center circle">
+									<label>
+										<input type="radio" name="group" id="p1-dh-5" class="conf-input" value="5">
+										<span class="btn blue conf-btn">5
+											<b class="btnRecomend">R</b>
+										</span>
+									</label>
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row">
+										<div class="col-12">Set the Diffie-Hellman group for Internet Security Association and Key Management Protocol (ISAKMP):</div>
+										<div class="col">1 Diffie-Hellman group 1<br>(768 bit)</div>
+										<div class="col">2 Diffie-Hellman group 2<br>(1024 bit)</div>
+										<div class="col">5 Diffie-Hellman group 5<br>(1536 bit)</div>
+										<hr class="speedSecurityLine">
+									</div>
+								</div>
+							</div>
+
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4 center ">
+									<span class="name-l ">Lifetime:</span>
+									<input type="number" name="lifeTime" pattern="\d{60,86400}" placeholder="60-86400">
+								</div>
+
+								<div class="col-12 col-md-4 center ">
+									<span class="name-l ">IP destination router:</span>
+									<input type="text" name="nextRouterAddress" placeholder="192.168.0.1">
+								</div>
+
+								<div class="col-12 col-md-4 center">
+									<span class="name-l ">Key:</span>
+									<input type="password" name="key" placeholder="Str0nG_pAssWoRd">
+								</div>
+							</div>
+
+							<div class="row no-gutters justify-content-center">
+								<input type="button" class="btn green col-12 col-md-2" id="next-phase-btn" value="Next">
+							</div>
+						</div>
+						<div class="col-12 center" id="show-1phase-btn">
+							<input type="button" class="btn orange col-12 col-md-2" name="click" value="Back">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12" id="phase2">
+				<div class="container content-block">
+					<div class="row">
+
+						<div class="col-12">
+							<h3>II phase</h3>
+							<hr>
+						</div>
+						<div class="col-12">
+
+							<div class="col-12">
+								<h3>IPsec setting</h3>
+								<hr>
+							</div>
 
 
-                            <div class="row bord-b align-items-center">
-
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Type: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">AH</span>
-                                    </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="espBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">ESP</span>
-                                    </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
-                                        <span class="btn blue conf-btn">AH/ESP</span>
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">Set the IPSec type:</div>
-                                        <div class="col">Authentication Header<br>(AH)<ul style='text-align: left;'><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul></div>
-                                        <div class="col">Encapsulation Security Payload<br>(ESP)<ul style='text-align: left;'><li>Encryption</li><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul></div>
-                                        <div class="col">Authentication Header<br>+<br>Encapsulation Security Payload</div>
-                                        <hr class="speedSecurityLine">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="AH">
-                                <div class="row bord-b align-items-center">
-                                    <div class="col-12 col-md-3 forInfo">
-                                        <span class="name-l">AH: </span>
-                                        <i class="fas fa-info-circle"></i>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
-                                            <span class="btn blue conf-btn">MD5</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
-                                            <span class="btn blue conf-btn">SHA</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-12 infoBlock">
-                                        <div class="row">
-                                            <div class="col-12">Set the AH mode:</div>
-                                            <div class="col">MD5 Message Digest 5<br>(128 bit, not recommended)</div>
-                                            <div class="col">SHA Secure Hash Standard<br>(160 bit)</div>
-                                            <hr class="speedSecurityLine">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="ESP">
-                                <div class="row bord-b align-items-center">
-                                    <div class="col-12 col-md-3 forInfo">
-                                        <span class="name-l">ESP: </span>
-                                        <i class="fas fa-info-circle"></i>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
-                                            <span class="btn blue conf-btn">DES</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
-                                            <span class="btn blue conf-btn">3DES</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
-                                            <span class="btn blue conf-btn">AES</span>
-                                        </label>
-                                    </div>
-                                    +
-                                    <div class="col center">
-                                        <label>
-                                            <input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
-                                            <span class="btn yellow conf-btn">MD5</span>
-                                        </label>
-                                    </div>
-                                    <div class="col center ">
-                                        <label>
-                                            <input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
-                                            <span class="btn yellow conf-btn">SHA</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-12 infoBlock">
-                                        <div class="row">
-                                            <div class="col-12">Set the Encapsulation Security Payload mode:</div>
-                                            <div class="col">DES<br>Data Encryption Standard<br>(56 bit, not recommended)</div>
-                                            <div class="col">3DES<br>Three key triple DES<br>(168 bit)</div>
-                                            <div class="col">AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)</div>
-                                            <hr class="speedSecurityLine">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row bord-b align-items-center">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Mode: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="ipsecMode" id="p2-tunnel" class="conf-input" value="tunnel">
-                                        <span class="btn blue conf-btn">Tunnel</span>
-                                    </label>
-                                </div>
-                                <div class="col center">
-                                    <label>
-                                        <input type="radio" name="ipsecMode" id="p2-transport" class="conf-input" value="transport">
-                                        <span class="btn blue conf-btn">Transport</span>
-                                    </label>
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12">Set the IPSec mode:</div>
-                                        <div class="col">Tunnel<br>(Gateway-Gateway, default)</div>
-                                        <div class="col">Transport<br>(Host-Host)</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 mrg-top-50">
-                                <h3>Access-list setting</h3>
-                                <hr>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">ACL-number:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="number" name="numberAcl" value="" placeholder="100-199">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Source network:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-3">
-                                    <span class="name-l">Destination network:</span>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="destAddress" value="" placeholder="192.168.1.0">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="destMask" value="" placeholder="0.0.0.255">
-                                </div>
-                            </div>
+							<div class="row rowFix">
+								<div class="col-12 col-md-3">
+									<span class="name-l">Transform-set:</span>
+								</div>
+								<div class="col">
+									<input type="text" name="transformName" value="" placeholder="Name">
+								</div>
+							</div>
 
 
-                            <div class="col-12 mrg-top-50">
-                                <h3>Crypto-map setting</h3>
-                                <hr>
-                            </div>
+							<div class="row bord-b align-items-center">
 
-                            <div class="row rowFix">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Name/Number: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="mapName" value="" placeholder="NAME">
-                                </div>
-                                <div class="col">
-                                    <input type="number" name="mapNumber" value="" placeholder="1-65535">
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row">
-                                        <div class="col-12"> Set the Crypto MAP name and number<br> Crypto map contain:<ul style='text-align: left;'><li>Peer info</li><li>Match address info (ACL)</li><li>Transform-set info (IPSec)</li></ul></div>
-                                    </div>
-                                </div>
-                            </div>
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l">Type: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col center">
+									<label>
+										<input type="radio" name="mode" id="ahBtn" class="conf-input" value="">
+										<span class="btn blue conf-btn">AH</span>
+									</label>
+								</div>
+								<div class="col center">
+									<label>
+										<input type="radio" name="mode" id="espBtn" class="conf-input" value="">
+										<span class="btn blue conf-btn">ESP</span>
+									</label>
+								</div>
+								<div class="col center">
+									<label>
+										<input type="radio" name="mode" id="ahEspBtn" class="conf-input" value="">
+										<span class="btn blue conf-btn">AH/ESP</span>
+									</label>
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row">
+										<div class="col-12">Set the IPSec type:</div>
+										<div class="col">Authentication Header<br>(AH)<ul style='text-align: left;'><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul></div>
+										<div class="col">Encapsulation Security Payload<br>(ESP)<ul style='text-align: left;'><li>Encryption</li><li>Authentication</li><li>Integrality</li><li>Replay-attacks protection</li></ul></div>
+										<div class="col">Authentication Header<br>+<br>Encapsulation Security Payload</div>
+										<hr class="speedSecurityLine">
+									</div>
+								</div>
+							</div>
+
+							<div id="AH">
+								<div class="row bord-b align-items-center">
+									<div class="col-12 col-md-3 forInfo">
+										<span class="name-l">AH: </span>
+										<i class="fas fa-info-circle"></i>
+									</div>
+									<div class="col center">
+										<label>
+											<input type="radio" name="hashAH" id="p2-md5" class="conf-input" value="ah-md5-hmac">
+											<span class="btn blue conf-btn">MD5</span>
+										</label>
+									</div>
+									<div class="col center">
+										<label>
+											<input type="radio" name="hashAH" id="p2-sha-ah" class="conf-input" value="ah-sha-hmac">
+											<span class="btn blue conf-btn">SHA</span>
+										</label>
+									</div>
+									<div class="col-12 infoBlock">
+										<div class="row">
+											<div class="col-12">Set the AH mode:</div>
+											<div class="col">MD5 Message Digest 5<br>(128 bit, not recommended)</div>
+											<div class="col">SHA Secure Hash Standard<br>(160 bit)</div>
+											<hr class="speedSecurityLine">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="ESP">
+								<div class="row bord-b align-items-center">
+									<div class="col-12 col-md-3 forInfo">
+										<span class="name-l">ESP: </span>
+										<i class="fas fa-info-circle"></i>
+									</div>
+									<div class="col center">
+										<label>
+											<input type="radio" name="encESP" id="p2-des" class="conf-input" value="esp-des">
+											<span class="btn blue conf-btn">DES</span>
+										</label>
+									</div>
+									<div class="col center">
+										<label>
+											<input type="radio" name="encESP" id="p2-3des" class="conf-input" value="esp-3des">
+											<span class="btn blue conf-btn">3DES</span>
+										</label>
+									</div>
+									<div class="col center">
+										<label>
+											<input type="radio" name="encESP" id="p2-aes" class="conf-input" value="esp-aes">
+											<span class="btn blue conf-btn">AES</span>
+										</label>
+									</div>
+									+
+									<div class="col center">
+										<label>
+											<input type="radio" name="hashESP" id="p2-md5-esp" class="conf-input" value="esp-md5-hmac">
+											<span class="btn yellow conf-btn">MD5</span>
+										</label>
+									</div>
+									<div class="col center ">
+										<label>
+											<input type="radio" name="hashESP" id="p2-sha-esp" class="conf-input" value="esp-sha-hmac">
+											<span class="btn yellow conf-btn">SHA</span>
+										</label>
+									</div>
+									<div class="col-12 infoBlock">
+										<div class="row">
+											<div class="col-12">Set the Encapsulation Security Payload mode:</div>
+											<div class="col">DES<br>Data Encryption Standard<br>(56 bit, not recommended)</div>
+											<div class="col">3DES<br>Three key triple DES<br>(168 bit)</div>
+											<div class="col">AES<br>Advanced Encryption Standard<br>(128,192,256 bit, recommended)</div>
+											<hr class="speedSecurityLine">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row bord-b align-items-center">
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l">Mode: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col center">
+									<label>
+										<input type="radio" name="ipsecMode" id="p2-tunnel" class="conf-input" value="tunnel">
+										<span class="btn blue conf-btn">Tunnel</span>
+									</label>
+								</div>
+								<div class="col center">
+									<label>
+										<input type="radio" name="ipsecMode" id="p2-transport" class="conf-input" value="transport">
+										<span class="btn blue conf-btn">Transport</span>
+									</label>
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row">
+										<div class="col-12">Set the IPSec mode:</div>
+										<div class="col">Tunnel<br>(Gateway-Gateway, default)</div>
+										<div class="col">Transport<br>(Host-Host)</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 mrg-top-50">
+								<h3>Access-list setting</h3>
+								<hr>
+							</div>
+
+							<div class="row">
+								<div class="col-12 col-md-3">
+									<span class="name-l">ACL-number:</span>
+								</div>
+								<div class="col">
+									<input type="number" name="numberAcl" value="" placeholder="100-199">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12 col-md-3">
+									<span class="name-l">Source network:</span>
+								</div>
+								<div class="col">
+									<input type="text" name="sourceAddress" value="" placeholder="192.168.0.0">
+								</div>
+								<div class="col">
+									<input type="text" name="sourceMask" value="" placeholder="0.0.0.255">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12 col-md-3">
+									<span class="name-l">Destination network:</span>
+								</div>
+								<div class="col">
+									<input type="text" name="destAddress" value="" placeholder="192.168.1.0">
+								</div>
+								<div class="col">
+									<input type="text" name="destMask" value="" placeholder="0.0.0.255">
+								</div>
+							</div>
 
 
-                            <div class="col-12 mrg-top-50">
-                                <h3>Interface setting</h3>
-                                <hr>
-                            </div>
+							<div class="col-12 mrg-top-50">
+								<h3>Crypto-map setting</h3>
+								<hr>
+							</div>
 
-                            <div class="row rowFix">
-                                <div class="col-12 col-md-3 forInfo">
-                                    <span class="name-l">Interface: </span>
-                                    <i class="fas fa-info-circle"></i>
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="interfaceName" value="" placeholder="fa0/0">
-                                </div>
-                                <div class="col-12 infoBlock">
-                                    <div class="row align-items-center">
-                                        <div class="col-12">Set the name of the interface that looks on the Internet side on your router</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="button" class="btn green col-12 col-md-3" id="result-btn" value="Result">
-                        </div>
-                    </div>
-                </div>
-            </div>
+							<div class="row rowFix">
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l">Name/Number: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col">
+									<input type="text" name="mapName" value="" placeholder="NAME">
+								</div>
+								<div class="col">
+									<input type="number" name="mapNumber" value="" placeholder="1-65535">
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row">
+										<div class="col-12"> Set the Crypto MAP name and number<br> Crypto map contain:<ul style='text-align: left;'><li>Peer info</li><li>Match address info (ACL)</li><li>Transform-set info (IPSec)</li></ul></div>
+									</div>
+								</div>
+							</div>
 
 
-            <div class="col-12 result-block">
-                <div class="container content-block">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="name-l">Result:</h3>
-                            <hr>
-                        </div>
-                        <div id="result" class="col-12">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4">
-                                    <span class="name-l">Text setting</span>
-                                    <hr>
+							<div class="col-12 mrg-top-50">
+								<h3>Interface setting</h3>
+								<hr>
+							</div>
 
-                                    <textarea id="result-output" rows="8" cols="24">#enable // example configure text &#013;&#010;#configure terminal</textarea>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <span class="name-l">Download settings file</span>
-                                    <hr>
-                                    <div id="downBtn" class="btn green">Download</div>
-                                    <p style="font-size: 1rem; margin: 15px;">(Download config.txt file configuration)</p>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <span class="name-l">QR code setting</span>
-                                    <hr>
-                                    <div id="qr"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+							<div class="row rowFix">
+								<div class="col-12 col-md-3 forInfo">
+									<span class="name-l">Interface: </span>
+									<i class="fas fa-info-circle"></i>
+								</div>
+								<div class="col">
+									<input type="text" name="interfaceName" value="" placeholder="fa0/0">
+								</div>
+								<div class="col-12 infoBlock">
+									<div class="row align-items-center">
+										<div class="col-12">Set the name of the interface that looks on the Internet side on your router</div>
+									</div>
+								</div>
+							</div>
+							<input type="button" class="btn green col-12 col-md-3" id="result-btn" value="Result">
+						</div>
+					</div>
+				</div>
+			</div>
 
 
-    </div>
+			<div class="col-12 result-block">
+				<div class="container content-block">
+					<div class="row">
+						<div class="col-12">
+							<h3 class="name-l">Result:</h3>
+							<hr>
+						</div>
+						<div id="result" class="col-12">
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<span class="name-l">Text setting</span>
+									<hr>
 
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <p>
-                    <a href="https://eugenefenko.github.io/">Eugene Fenko</a> | 2017</p>
-            </div>
-        </div>
-    </footer>
+									<textarea id="result-output" rows="8" cols="24">#enable // example configure text &#013;&#010;#configure terminal</textarea>
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<span class="name-l">Download settings file</span>
+									<hr>
+									<div id="downBtn" class="btn green">Download</div>
+									<p style="font-size: 1rem; margin: 15px;">(Download config.txt file configuration)</p>
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<span class="name-l">QR code setting</span>
+									<hr>
+									<div id="qr"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
-    <div class="container-fluid toolBox">
-        <div class="row">
-            <div class="col-5 toolBox_content align-middle">
-                <sapn>
-                    <span>Expert mode</span>
-                    <label class="tgl tgl-gray align-middle" id="btnExpert">
-                        <input id="expI_O" type="checkbox">
-                        <span>&nbsp;&nbsp;</span>
-                    </label>
-                </sapn>
-            </div>
-            <div class="col-2 forkMe d-flex justify-content-center">
-                <a target="_blank" href="https://github.com/EugeneFenko/ipsec">
-                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjcyIDE0NzJxMC00MC0yOC02OHQtNjgtMjgtNjggMjgtMjggNjggMjggNjggNjggMjggNjgtMjggMjgtNjh6bTAtMTE1MnEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptNjQwIDEyOHEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptOTYgMHEwIDUyLTI2IDk2LjV0LTcwIDY5LjVxLTIgMjg3LTIyNiA0MTQtNjggMzgtMjAzIDgxLTEyOCA0MC0xNjkuNSA3MXQtNDEuNSAxMDB2MjZxNDQgMjUgNzAgNjkuNXQyNiA5Ni41cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNnEwLTUyIDI2LTk2LjV0NzAtNjkuNXYtODIwcS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2cTAgNTItMjYgOTYuNXQtNzAgNjkuNXY0OTdxNTQtMjYgMTU0LTU3IDU1LTE3IDg3LjUtMjkuNXQ3MC41LTMxIDU5LTM5LjUgNDAuNS01MSAyOC02OS41IDguNS05MS41cS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2eiIvPjwvc3ZnPg==" alt="Fork Me">
-                </a>
-            </div>
-            <div class="col-5 lng-sw">
-                <!-- <div class="uk">
-                            <a data-attr-t-interpolate data-attr-t href-t="{{links.uk}}">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
-                            </a>
-                        </div>
-                        <div class="ru">
-                            <a data-attr-t-interpolate data-attr-t href-t="{{links.ru}}"}>
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAo0lEQVRIS2PcuO+I+u07D/d/+/5DkoGOgIuT47mqirwjY8+spc/obTnMnyBHMDZNnPsfJFCcHkdH/zMw9M5cBLZv1AGjITDwIcCoWf+fhZWNwcotnq654NDW2ZBcMOqA0RAYDYEBD4HlAgzg2tBaRoKu5cDRJy8g5cCoA0ZDYDCEwGUGBgYdumYBhGXnGZdxM4gzsTHs+/+fQYvOjjj//zeDJwBxf34P7r+YUwAAAABJRU5ErkJggg==" alt="" srcset="">
-                            </a>
-                        </div>
-                        <div class="en">
-                            <a data-attr-t-interpolate data-attr-t href-t="{{links.en}}">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAABT0lEQVRIS2PMFlaJ3SwbPO8dqwgLAwgwM4Ephr//IDQRfCYONobqI7kQ9cSDl///M6QyyhmU/37LKAixnEzAyM7KUHummBzdLxl5TLv////zl2HnvBQGRkYGhpiGC2CDFtcbEM1nZmNhODXXgiQHTJm3FKwe7oBd81MYGBkYGKKhDljSYEA0n5mVheHUPHIdYNH7///P3wxi8iYk+xzmZVZudoZtpyJJCoG1959AQwDNAaT4HGYjGzc7w1ayHTCaBkbTwGgaQEsDJGVmqGKKygE+h8n///34xSAhZ8zA8J+BgYmNGVwC/v39l2g+Oy8Hw/q9gSS5HV4QNU2c+5+dnY0hNTqUJAMoVQyvCwbcAZ0soIBnYAhWlKHUUyTph0fBgDtgwKNgwB3QycLwgoGBQZykCKSe4meMHcwMvoyMDHMYGBjEqGcuUSY9+/+fIQMA7YEh8yRPGe0AAAAASUVORK5CYII=" alt="" srcset="">
-                            </a>
-                        </div> -->
-                <div class="sl-nav">
-                    <span>Language</span>
-                    <ul>
-                        <li>
-                            <b>English</b>
-                            <i class="fa fa-angle-up" aria-hidden="true"></i>
-                            <div class="triangle"></div>
-                            <ul>
-                                <li>
-                                    <a href="/ipsec">
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAABT0lEQVRIS2PMFlaJ3SwbPO8dqwgLAwgwM4Ephr//IDQRfCYONobqI7kQ9cSDl///M6QyyhmU/37LKAixnEzAyM7KUHummBzdLxl5TLv////zl2HnvBQGRkYGhpiGC2CDFtcbEM1nZmNhODXXgiQHTJm3FKwe7oBd81MYGBkYGKKhDljSYEA0n5mVheHUPHIdYNH7///P3wxi8iYk+xzmZVZudoZtpyJJCoG1959AQwDNAaT4HGYjGzc7w1ayHTCaBkbTwGgaQEsDJGVmqGKKygE+h8n///34xSAhZ8zA8J+BgYmNGVwC/v39l2g+Oy8Hw/q9gSS5HV4QNU2c+5+dnY0hNTqUJAMoVQyvCwbcAZ0soIBnYAhWlKHUUyTph0fBgDtgwKNgwB3QycLwgoGBQZykCKSe4meMHcwMvoyMDHMYGBjEqGcuUSY9+/+fIQMA7YEh8yRPGe0AAAAASUVORK5CYII=" alt="" srcset="">
-                                        <div><span class='active'>English</span></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/ipsec/ru">
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAo0lEQVRIS2PcuO+I+u07D/d/+/5DkoGOgIuT47mqirwjY8+spc/obTnMnyBHMDZNnPsfJFCcHkdH/zMw9M5cBLZv1AGjITDwIcCoWf+fhZWNwcotnq654NDW2ZBcMOqA0RAYDYEBD4HlAgzg2tBaRoKu5cDRJy8g5cCoA0ZDYDCEwGUGBgYdumYBhGXnGZdxM4gzsTHs+/+fQYvOjjj//zeDJwBxf34P7r+YUwAAAABJRU5ErkJggg==" alt="" srcset="">
-                         
-                                        <div><span>Russian</span></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/ipsec/uk">
-                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
-                           
-                                        <div><span>Ukrainian</span></div>
-                                    </a>
-                                </li>
+	<div id="calc" class="container-fluid content">
+		<form id="calc-form" class="row">
+			<div class="col-12 calc-block">
+				<div class="container content-block">
+					<div class="row">
+						<div class="col-12">
+							<h3 class="name-l center">Decryption time</h3>
+							<hr>
+						</div>
+						<div class="col-12">
+							<div class="row">
+								<div class="col-12 col-sm-5">
+									<div class="row">
+										<div class="col">
+											<label class="name-l" for="brute-speed">Algorithm</label>
+										</div>
+										<div class="col speed-form">
+											<select name="selectAlgo" id="selectAlgo">
+												<option value="56">DES</option>
+												<option value="168">3DES</option>
+												<option value="128">AES 128</option>
+												<option value="192">AES 192</option>
+												<option value="256">AES 256</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-7">
+									<div class="row">
+										<div class="col-3">
+											<label class="name-l" for="brute-speed">Speed</label>
+										</div>
+										<div class="col speed-form">
+											<input id="bruteSpeed" name="brute-speed" type="number">
+											<select name="speedScale" id="speedScale">
+												<option value="1000">kH/s</option>
+												<option value="1000000">MH/s</option>
+												<option value="1000000000">GH/s</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="calcResult" class="col-12">				
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container-fluid toolBox">
+		<div class="row">
+			<div class="col-5 toolBox_content align-middle">
+				<sapn>
+					<span>Expert mode</span>
+					<label class="tgl tgl-gray align-middle" id="btnExpert">
+						<input id="expI_O" type="checkbox">
+						<span>&nbsp;&nbsp;</span>
+					</label>
+				</sapn>
+			</div>
+			<div class="col-2 forkMe d-flex justify-content-center">
+				<a target="_blank" href="https://github.com/EugeneFenko/ipsec">
+					<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNjcyIDE0NzJxMC00MC0yOC02OHQtNjgtMjgtNjggMjgtMjggNjggMjggNjggNjggMjggNjgtMjggMjgtNjh6bTAtMTE1MnEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptNjQwIDEyOHEwLTQwLTI4LTY4dC02OC0yOC02OCAyOC0yOCA2OCAyOCA2OCA2OCAyOCA2OC0yOCAyOC02OHptOTYgMHEwIDUyLTI2IDk2LjV0LTcwIDY5LjVxLTIgMjg3LTIyNiA0MTQtNjggMzgtMjAzIDgxLTEyOCA0MC0xNjkuNSA3MXQtNDEuNSAxMDB2MjZxNDQgMjUgNzAgNjkuNXQyNiA5Ni41cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNnEwLTUyIDI2LTk2LjV0NzAtNjkuNXYtODIwcS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2cTAgNTItMjYgOTYuNXQtNzAgNjkuNXY0OTdxNTQtMjYgMTU0LTU3IDU1LTE3IDg3LjUtMjkuNXQ3MC41LTMxIDU5LTM5LjUgNDAuNS01MSAyOC02OS41IDguNS05MS41cS00NC0yNS03MC02OS41dC0yNi05Ni41cTAtODAgNTYtMTM2dDEzNi01NiAxMzYgNTYgNTYgMTM2eiIvPjwvc3ZnPg==" alt="Fork Me">
+				</a>
+			</div>
+			<div class="col-5 lng-sw">
+				<div class="sl-nav">
+					<span>Language</span>
+					<ul>
+						<li>
+							<b>English</b>
+							<i class="fa fa-angle-up" aria-hidden="true"></i>
+							<div class="triangle"></div>
+							<ul>
+								<li>
+									<a href="/ipsec">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAYAAAChWZ5EAAABT0lEQVRIS2PMFlaJ3SwbPO8dqwgLAwgwM4Ephr//IDQRfCYONobqI7kQ9cSDl///M6QyyhmU/37LKAixnEzAyM7KUHummBzdLxl5TLv////zl2HnvBQGRkYGhpiGC2CDFtcbEM1nZmNhODXXgiQHTJm3FKwe7oBd81MYGBkYGKKhDljSYEA0n5mVheHUPHIdYNH7///P3wxi8iYk+xzmZVZudoZtpyJJCoG1959AQwDNAaT4HGYjGzc7w1ayHTCaBkbTwGgaQEsDJGVmqGKKygE+h8n///34xSAhZ8zA8J+BgYmNGVwC/v39l2g+Oy8Hw/q9gSS5HV4QNU2c+5+dnY0hNTqUJAMoVQyvCwbcAZ0soIBnYAhWlKHUUyTph0fBgDtgwKNgwB3QycLwgoGBQZykCKSe4meMHcwMvoyMDHMYGBjEqGcuUSY9+/+fIQMA7YEh8yRPGe0AAAAASUVORK5CYII=" alt="" srcset="">
+										<div><span class='active'>English</span></div>
+									</a>
+								</li>
+								<li>
+									<a href="/ipsec/ru">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAo0lEQVRIS2PcuO+I+u07D/d/+/5DkoGOgIuT47mqirwjY8+spc/obTnMnyBHMDZNnPsfJFCcHkdH/zMw9M5cBLZv1AGjITDwIcCoWf+fhZWNwcotnq654NDW2ZBcMOqA0RAYDYEBD4HlAgzg2tBaRoKu5cDRJy8g5cCoA0ZDYDCEwGUGBgYdumYBhGXnGZdxM4gzsTHs+/+fQYvOjjj//zeDJwBxf34P7r+YUwAAAABJRU5ErkJggg==" alt="" srcset="">
+
+										<div><span>Russian</span></div>
+									</a>
+								</li>
+								<li>
+									<a href="/ipsec/uk">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
+
+										<div><span>Ukrainian</span></div>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/qrcode.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/qrcode.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
