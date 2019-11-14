@@ -39,11 +39,13 @@ body,html {
     font-family: Roboto, monospace;
     font-size: 16px;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
-a,a:hover,a:link,a:visited {
+a,a:hover,a:link,a:visited,a:focus {
     color: #fff;
     text-decoration: none !important;
+    outline: none;
 }
 
 .content-center {
@@ -65,6 +67,9 @@ a,a:hover,a:link,a:visited {
   display: inline-block;
   cursor: pointer;
   z-index: 5;
+}
+.btn:focus {
+  box-shadow: none;
 }
 
 @media(max-width: 424px) {
@@ -158,6 +163,7 @@ input {
     border-right: none;
     border-top: none;
     padding: 8px;
+    outline: none;
 }
 
 
@@ -228,6 +234,7 @@ header {
     height: 100vh;
     position: absolute !important;
     z-index: 0;
+    overflow: hidden;
 }
 
 #logo-text {
@@ -324,7 +331,43 @@ header {
 	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 
-	}
+  }
+  
+#go, #calc {
+  display: none;
+  min-height: 100vh;
+}
+
+#calcResult {
+  text-align: center;
+}
+
+#selectAlgo {
+  width: 100%;
+}
+
+.algorithm {
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.algorithm > h1 {
+  font-size: 5rem;
+}
+
+.speed-form {
+  display: flex;
+}
+
+.speed-form > input {
+  text-align: right;
+}
+
+.brute-time {
+  color: orangered;
+}
 
 /* FOOTER  */
 

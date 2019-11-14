@@ -516,6 +516,7 @@ var outputConfig;
 
   function showOnePhase() {
     $("#phase2").hide(1000);
+    $(".result-block").hide(1000);
     $("#show-1phase-btn").hide(100);
     $("#phase1").show(1000);
   }
@@ -600,4 +601,49 @@ var qrcode = new QRCode("qr", {
   colorDark: "#333",
   colorLight: "#fff",
   correctLevel: QRCode.CorrectLevel.H
+});
+
+
+function showCalc() {
+  $('#calc').show();
+  $('#go').hide();
+}
+function showConfig() {
+  $('#go').show();
+  $('#calc').hide();
+}
+function calcBrute(e) {
+  let speed = e.value;
+  let algo = $("#selectAlgo :selected").text();
+  let bit = $("#selectAlgo :selected").val();
+  let scale = $("#speedScale :selected").val();
+  let sec = Math.pow(2,bit)/(speed*scale);
+  let day = Math.floor(sec/(3600*24));
+  let month = Math.floor(day/30);
+  let year = Math.floor(day/365);
+  console.log(`N: ${Math.pow(2,56)}\nSpeed: ${(speed*scale)}\nTime: ${sec}s\nDay: ${day}\nYear: ${year}`);
+  $('#calcResult').html(`<div class="row">
+  <div class="col-4 algorithm">
+  <h1>${algo}</h1>
+  </div>
+  <div class="col-8">
+    <h1 class="brute-time-year">
+      <span>~${year}</span>
+      <span>years</span>
+    </h1>
+    <h2 class="brute-time-month">
+      <span>~${month}</span>
+      <span>months</span>
+    </h2>
+    <h3 class="brute-time-days">
+      <span>~${day}</span>
+      <span>days</span>
+    </h3>
+  </div>
+</div>`);
+}
+
+
+document.getElementById('bruteSpeed').addEventListener('input', e => {
+  calcBrute(e.target);
 });

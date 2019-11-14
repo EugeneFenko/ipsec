@@ -4,7 +4,8 @@
     "title": "Smart IPSec"
   },
   "header": {
-    "button": "🚀 Create configuration"
+    "button-config": "🚀 Create configuration",
+    "button-calc": "🚀 Decryption time"
   },
   "ph1": {
     "title": "I phase",
@@ -105,6 +106,11 @@
     "down-btn": "Download",
     "down-help": "(Download config.txt file configuration)",
     "qr": "QR code setting"
+  },
+  "calc": {
+    "title": "Decryption time",
+    "speed": "Speed",
+    "algo": "Algorithm"
   },
   "footer": {
     "author": "Eugene Fenko"
