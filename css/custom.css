@@ -340,11 +340,13 @@ header {
 
 #calcResult {
   text-align: center;
+  display: none;
 }
 
 #selectAlgo {
   width: 100%;
 }
+
 
 .algorithm {
   color: gray;

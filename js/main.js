@@ -621,29 +621,21 @@ function calcBrute(e) {
   let day = Math.floor(sec/(3600*24));
   let month = Math.floor(day/30);
   let year = Math.floor(day/365);
+
   console.log(`N: ${Math.pow(2,56)}\nSpeed: ${(speed*scale)}\nTime: ${sec}s\nDay: ${day}\nYear: ${year}`);
-  $('#calcResult').html(`<div class="row">
-  <div class="col-4 algorithm">
-  <h1>${algo}</h1>
-  </div>
-  <div class="col-8">
-    <h1 class="brute-time-year">
-      <span>~${year}</span>
-      <span>years</span>
-    </h1>
-    <h2 class="brute-time-month">
-      <span>~${month}</span>
-      <span>months</span>
-    </h2>
-    <h3 class="brute-time-days">
-      <span>~${day}</span>
-      <span>days</span>
-    </h3>
-  </div>
-</div>`);
+  if (speed == '' || speed < 0 || speed == 0) { 
+    $('#calcResult').hide(); 
+  } else {
+    $('#calcResult').show();
+  }
+  $('#algo').html(algo);
+  $('#year').html(year > 1000000 ? numeral(year).format('0.00e+0') : year);
+  $('#month').html(month > 1000000 ? numeral(month).format('0.00e+0') : month);
+  $('#day').html(day > 1000000 ? numeral(day).format('0.00e+0') : day);
 }
 
 
 document.getElementById('bruteSpeed').addEventListener('input', e => {
   calcBrute(e.target);
 });
+
