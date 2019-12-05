@@ -166,6 +166,12 @@ input {
     outline: none;
 }
 
+select {
+  background: white;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+}
 
 
 input:focus {
@@ -723,6 +729,4 @@ hr.speedSecurityLine::after {
   .sl-nav li ul li span:hover, .sl-nav li ul li span.active {
     color: #146c78;
   }
-
-
 

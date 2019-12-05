@@ -622,7 +622,7 @@ function calcBrute(e) {
   let month = Math.floor(day/30);
   let year = Math.floor(day/365);
 
-  console.log(`N: ${Math.pow(2,56)}\nSpeed: ${(speed*scale)}\nTime: ${sec}s\nDay: ${day}\nYear: ${year}`);
+  // console.log(`N: ${Math.pow(2,56)}\nSpeed: ${(speed*scale)}\nTime: ${sec}s\nDay: ${day}\nYear: ${year}`);
   if (speed == '' || speed < 0 || speed == 0) { 
     $('#calcResult').hide(); 
   } else {
@@ -638,4 +638,6 @@ function calcBrute(e) {
 document.getElementById('bruteSpeed').addEventListener('input', e => {
   calcBrute(e.target);
 });
+
+$('#calc-form').submit(e => { e.preventDefault() });
 

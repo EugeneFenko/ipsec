@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-12 center justify-content-end">
 				<a href="#go" onclick="showConfig()" class="green btn header-btn">🚀 Створити конфігурацію</a>
-				<a href="#calc" onclick="showCalc()" class="green btn header-btn">🚀 Час дешифрування</a>
+				<a href="#calc" onclick="showCalc()" class="green btn header-btn">⏱️ Час дешифрування</a>
 			</div>
 
 
@@ -547,7 +547,7 @@
 							<div class="row">
 								<div class="col-12 col-sm-5">
 									<div class="row">
-										<div class="col">
+										<div class="col text-left text-md-right">
 											<label class="name-l" for="brute-speed">Алгоритм</label>
 										</div>
 										<div class="col speed-form">
@@ -558,17 +558,21 @@
 												<option value="192">AES 192</option>
 												<option value="256">AES 256</option>
 											</select>
+
+											
+
 										</div>
 									</div>
 								</div>
 								<div class="col-12 col-sm-7">
 									<div class="row">
-										<div class="col-5">
+										<div class="col-5 text-left text-md-right">
 											<label class="name-l" for="brute-speed">Швидкість підбору</label>
 										</div>
 										<div class="col speed-form">
 											<input id="bruteSpeed" name="brute-speed" type="number">
 											<select name="speedScale" id="speedScale">
+												<option value="1">H/s</option>
 												<option value="1000">kH/s</option>
 												<option value="1000000">MH/s</option>
 												<option value="1000000000">GH/s</option>
@@ -580,10 +584,10 @@
 						</div>
 						<div id="calcResult" class="col-12">
 							<div class="row">
-								<div class="col-12 col-sm-4 algorithm">
+								<div class="col-12 col-sm-6 algorithm">
 									<h1 id="algo"></h1>
 								</div>
-								<div class="col-12 col-sm-8">
+								<div class="col-12 col-sm-6">
 									<h1 class="brute-time-year">
 										<span>Роки</span>
 										<span id="year"></span>
@@ -600,6 +604,7 @@
 							</div>
 						</div>
 					</div>
+					<script src="https://gist.github.com/EugeneFenko/06985b1a897adec0790d78dedd59b312.js"></script>
 				</div>
 			</div>
 		</form>
