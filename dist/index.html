@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-12 center justify-content-end">
 				<a href="#go" onclick="showConfig()" class="green btn header-btn">🚀 Create configuration</a>
-				<a href="#calc" onclick="showCalc()" class="green btn header-btn">🚀 Decryption time</a>
+				<a href="#calc" onclick="showCalc()" class="green btn header-btn">⏱️ Decryption time</a>
 			</div>
 
 
@@ -547,7 +547,7 @@
 							<div class="row">
 								<div class="col-12 col-sm-5">
 									<div class="row">
-										<div class="col">
+										<div class="col text-left text-md-right">
 											<label class="name-l" for="brute-speed">Algorithm</label>
 										</div>
 										<div class="col speed-form">
@@ -558,17 +558,21 @@
 												<option value="192">AES 192</option>
 												<option value="256">AES 256</option>
 											</select>
+
+											
+
 										</div>
 									</div>
 								</div>
 								<div class="col-12 col-sm-7">
 									<div class="row">
-										<div class="col-3">
+										<div class="col-5 text-left text-md-right">
 											<label class="name-l" for="brute-speed">Speed</label>
 										</div>
 										<div class="col speed-form">
 											<input id="bruteSpeed" name="brute-speed" type="number">
 											<select name="speedScale" id="speedScale">
+												<option value="1">H/s</option>
 												<option value="1000">kH/s</option>
 												<option value="1000000">MH/s</option>
 												<option value="1000000000">GH/s</option>
@@ -578,9 +582,29 @@
 								</div>
 							</div>
 						</div>
-						<div id="calcResult" class="col-12">				
+						<div id="calcResult" class="col-12">
+							<div class="row">
+								<div class="col-12 col-sm-6 algorithm">
+									<h1 id="algo"></h1>
+								</div>
+								<div class="col-12 col-sm-6">
+									<h1 class="brute-time-year">
+										<span>Year:</span>
+										<span id="year"></span>
+									</h1>
+									<h2 class="brute-time-month">
+										<span>Month:</span>
+										<span id="month"></span>
+									</h2>
+									<h3 class="brute-time-days">
+										<span>Day:</span>
+										<span id="day"></span>
+									</h3>
+								</div>
+							</div>
 						</div>
 					</div>
+					<script src="https://gist.github.com/EugeneFenko/06985b1a897adec0790d78dedd59b312.js"></script>
 				</div>
 			</div>
 		</form>
@@ -618,13 +642,6 @@
 									</a>
 								</li>
 								<li>
-									<a href="/ipsec/ru">
-										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAo0lEQVRIS2PcuO+I+u07D/d/+/5DkoGOgIuT47mqirwjY8+spc/obTnMnyBHMDZNnPsfJFCcHkdH/zMw9M5cBLZv1AGjITDwIcCoWf+fhZWNwcotnq654NDW2ZBcMOqA0RAYDYEBD4HlAgzg2tBaRoKu5cDRJy8g5cCoA0ZDYDCEwGUGBgYdumYBhGXnGZdxM4gzsTHs+/+fQYvOjjj//zeDJwBxf34P7r+YUwAAAABJRU5ErkJggg==" alt="" srcset="">
-
-										<div><span>Russian</span></div>
-									</a>
-								</li>
-								<li>
 									<a href="/ipsec/uk">
 										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAkElEQVRIS2Nk8JstzvKfcc9/BgYdBjoCRgaGK38Y/7swsvjOuUxvy2H+BDmCkdl3zn+QgKa5Kx39z8Bw/eRusH2jDhgNgdEQGA2BgQ+BUw0M4JLQ1JuRriXh6a1gaxkYRx0wGgKjITAaAoMhBC4z0LlFDC9yGRnOM55oZRBn+s2wj4GBQYuuZTEjw/l/LAyeAIt/eV49symwAAAAAElFTkSuQmCC" alt="" srcset="">
 
@@ -645,6 +662,7 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/numeral.min.js"></script>
 	<script src="js/qrcode.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

@@ -5,7 +5,7 @@
   },
   "header": {
     "button-config": "🚀 Create configuration",
-    "button-calc": "🚀 Decryption time"
+    "button-calc": "⏱️ Decryption time"
   },
   "ph1": {
     "title": "I phase",
@@ -110,7 +110,10 @@
   "calc": {
     "title": "Decryption time",
     "speed": "Speed",
-    "algo": "Algorithm"
+    "algo": "Algorithm",
+    "years": "Year:",
+    "months": "Month:",
+    "days": "Day:"
   },
   "footer": {
     "author": "Eugene Fenko"

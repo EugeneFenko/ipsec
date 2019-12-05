@@ -21,7 +21,7 @@ gulp.task("i18n", function() {
     .src("src/index.html")  
     .pipe(
       staticI18nHtml({
-        locales: ["en", "uk", "ru"],
+        locales: ["en", "uk"],
         locale: "en"
       })
     )
