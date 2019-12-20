@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+
+    .page-wrap {
+        max-height: 88vh;
+        height: 100%;
+        padding: 0 5vw;
+    }
+}

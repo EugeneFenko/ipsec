@@ -1,0 +1,40 @@
+<mat-card>
+	<div class="title">
+		<mat-card-title>Cisco IOS IPSec Configurator</mat-card-title>
+		<mat-card-content>Cisco IOS v12</mat-card-content>
+	</div>
+
+	<mat-horizontal-stepper labelPosition="bottom">
+		<mat-step label="Phase 1">
+
+			<h3>Content 1</h3>
+
+			<mat-form-field>
+				<input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+			</mat-form-field>
+		
+			<div>
+				<button mat-button matStepperPrevious>Back</button>
+				<button mat-button matStepperNext>Next</button>
+			</div>
+		</mat-step>
+
+		<mat-step label="Phase 2">
+			Content 2
+
+			<div>
+				<button mat-button matStepperPrevious>Back</button>
+				<button mat-button matStepperNext>Next</button>
+			</div>
+		</mat-step>
+
+		<mat-step label="Result">
+			Result
+
+			<div>
+				<button mat-button matStepperPrevious>Back</button>
+				<button mat-button matStepperNext>Next</button>
+			</div>
+		</mat-step>
+	</mat-horizontal-stepper>
+</mat-card>
