@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+
+    .startpage__block-title {
+        text-align: center;
+    }
+    .startpage__block-button {
+        display: inherit;
+        // flex-direction: column; //for mobile
+        padding: 10px;
+        justify-content: space-evenly;
+        user-select: none;
+        
+        .block-button__button {
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px;
+            height: 20vh;
+            width: 20vw;
+            min-width: 250px;
+            min-height: 250px;
+
+            img {
+                min-height: 50%;
+                height: 80%;
+            }
+        }
+    }
+}
+

@@ -1,3 +1,16 @@
-<mat-card>
-	STARTPAGE
-</mat-card>
+<div class="startpage__block-title">
+	<mat-card>
+		<h3>Smart IPSec</h3>
+	</mat-card>
+</div>
+<div class="startpage__block-button">
+	<mat-card routerLink="configurator" routerLinkActive="router-link-active" class="block-button__button">
+		<img src="../../../assets/img/config.svg" alt="config">
+		<h3>Create configuration</h3>
+	</mat-card>
+	
+	<mat-card routerLink="calculator" routerLinkActive="router-link-active" class="block-button__button">
+		<img src="../../../assets/img/clock.svg" alt="clock">
+		<h3>Decryption time</h3>
+	</mat-card>
+</div>

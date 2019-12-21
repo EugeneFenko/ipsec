@@ -12,7 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+
 import { MaterialModule } from './material-module';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { MaterialModule } from './material-module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ParticlesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
