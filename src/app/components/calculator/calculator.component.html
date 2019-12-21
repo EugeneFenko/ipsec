@@ -1,4 +1,74 @@
-<mat-card>
-	<mat-card-title>Calculator Page</mat-card-title>
-	<mat-card-content>Content..</mat-card-content>
+<mat-card class="calculator">
+	<mat-card-title class="calculator__title">Decryption time</mat-card-title>
+	<mat-card-content class="calculator__block">
+
+		<mat-horizontal-stepper linear #calculator>
+
+			<mat-step label="Algorithm" [stepControl]="algoFormGroup">
+
+				<form class="calculator__step" [formGroup]="algoFormGroup">
+
+					Choose encryption algorithm:
+					<mat-form-field>
+						<mat-select [(ngModel)]="selectedAlgorithm" placeholder="Select algorithm" formControlName="algoCtrl" required>
+							<mat-option value="56">DES</mat-option>
+							<mat-option value="168">3DES</mat-option>
+							<mat-option value="128">AES 128</mat-option>
+							<mat-option value="168">AES 192</mat-option>
+							<mat-option value="256">AES 256</mat-option>
+						</mat-select>
+					</mat-form-field>
+
+					<div>
+						<button mat-button matStepperNext>Next</button>
+					</div>
+
+				</form>
+
+			</mat-step>
+
+			<mat-step label="Speed" class="calculator__step" [stepControl]="speedFormGroup">
+
+				<form class="calculator__step" [formGroup]="speedFormGroup">
+
+					Enter brute-force speed:
+
+					<mat-form-field>
+						<mat-label></mat-label>
+						<input [(ngModel)]="speed" matInput placeholder="number" formControlName="speedInput" required>
+					</mat-form-field>
+
+					<div>
+						<button mat-button matStepperPrevious>Back</button>
+						<button mat-button matStepperNext>Next</button>
+					</div>
+
+				</form>
+
+			</mat-step>
+
+			<mat-step label="Result" class="calculator__step">
+
+				<div class="calculator__step">
+
+					Decryption times
+
+					<mat-form-field>
+						<mat-label></mat-label>
+						<input class="calculator__resul-input" disabled matInput placeholder="number" [(ngModel)]="selectedAlgorithm/speed">
+					</mat-form-field>
+
+					<div>
+						<button mat-button matStepperPrevious>Back</button>
+						<button mat-button mat-button (click)="calculator.reset()">Reset</button>
+					</div>
+
+				</div>
+
+			</mat-step>
+
+		</mat-horizontal-stepper>
+
+
+	</mat-card-content>
 </mat-card>

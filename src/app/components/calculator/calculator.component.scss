@@ -1,0 +1,22 @@
+:host{
+	display: flex;
+	justify-content: center;
+}
+
+.calculator {
+	width: 40vw;
+    .calculator__title {
+				text-align: center;		
+		}
+		.calculator__step {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+		}
+		.calculator__resul-input {
+			text-align: center;
+			font-size: large;
+		}
+}

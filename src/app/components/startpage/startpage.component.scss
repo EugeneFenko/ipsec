@@ -1,10 +1,12 @@
 :host {
     display: flex;
+    align-items: center;
     flex-direction: column;
     height: 50vh;
 
     .startpage__block-title {
         text-align: center;
+        width: 50vw;
     }
     .startpage__block-button {
         display: inherit;
