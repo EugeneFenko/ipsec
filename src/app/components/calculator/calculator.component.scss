@@ -14,9 +14,13 @@
 			align-items: center;
 			flex-direction: column;
 			width: 100%;
-		}
-		.calculator__resul-input {
-			text-align: center;
-			font-size: large;
+			
+			.calculator__form {
+				display: flex;
+				justify-content: center;
+				.calculator__form-input {
+					width: 20%;
+				}
+			}
 		}
 }

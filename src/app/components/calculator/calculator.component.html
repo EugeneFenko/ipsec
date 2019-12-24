@@ -8,9 +8,10 @@
 
 				<form class="calculator__step" [formGroup]="algoFormGroup">
 
-					Choose encryption algorithm:
+					Select encryption algorithm:
 					<mat-form-field>
-						<mat-select [(ngModel)]="selectedAlgorithm" placeholder="Select algorithm" formControlName="algoCtrl" required>
+						<mat-select [(ngModel)]="selectedAlgorithm" formControlName="algoCtrl"
+							required>
 							<mat-option value="56">DES</mat-option>
 							<mat-option value="168">3DES</mat-option>
 							<mat-option value="128">AES 128</mat-option>
@@ -30,14 +31,22 @@
 			<mat-step label="Speed" class="calculator__step" [stepControl]="speedFormGroup">
 
 				<form class="calculator__step" [formGroup]="speedFormGroup">
-
-					Enter brute-force speed:
-
-					<mat-form-field>
-						<mat-label></mat-label>
-						<input [(ngModel)]="speed" matInput placeholder="number" formControlName="speedInput" required>
-					</mat-form-field>
-
+					Enter speed:
+					<div class="calculator__form">
+						<mat-form-field>
+							<mat-label></mat-label>
+							<input [(ngModel)]="entrySpeed" matInput placeholder="number" formControlName="speedInput" required>						
+						</mat-form-field>
+						<mat-form-field class="calculator__form-input">
+							<mat-select [(ngModel)]="selectedNumber" placeholder="H/s" formControlName="numberInput" required>
+								<mat-option value="1">H/s</mat-option>
+								<mat-option value="1000">kH/s</mat-option>
+								<mat-option value="1000000">MH/s</mat-option>
+								<mat-option value="1000000000">GH/s</mat-option>
+								<mat-option value="1000000000000">TH/s</mat-option>
+							</mat-select>
+						</mat-form-field>
+					</div>
 					<div>
 						<button mat-button matStepperPrevious>Back</button>
 						<button mat-button matStepperNext>Next</button>
@@ -48,15 +57,15 @@
 			</mat-step>
 
 			<mat-step label="Result" class="calculator__step">
-
 				<div class="calculator__step">
-
 					Decryption times
-
-					<mat-form-field>
-						<mat-label></mat-label>
-						<input class="calculator__resul-input" disabled matInput placeholder="number" [(ngModel)]="selectedAlgorithm/speed">
-					</mat-form-field>
+					<mat-list>
+						<mat-list-item>Day: {{ day }}</mat-list-item>
+						<mat-divider></mat-divider>
+						<mat-list-item>Month: {{ month }}</mat-list-item>
+						<mat-divider></mat-divider>
+						<mat-list-item>Year: {{ year }}</mat-list-item>
+					</mat-list>
 
 					<div>
 						<button mat-button matStepperPrevious>Back</button>
@@ -64,9 +73,7 @@
 					</div>
 
 				</div>
-
 			</mat-step>
-
 		</mat-horizontal-stepper>
 
 

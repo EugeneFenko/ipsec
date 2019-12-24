@@ -12,22 +12,33 @@ export class CalculatorComponent implements OnInit {
   algoFormGroup: FormGroup;
   speedFormGroup: FormGroup;
   
-  speed: number;
-  selectedAlgorithm: number;
-  allBits: number;
-  timeResult: number;
+  speed;
+  entrySpeed; 
+  selectedAlgorithm;
+  selectedNumber;
+  allBits;
+  second;
+  day;
+  month;
+  year;
 
   ngOnInit() {
-
-    this.allBits = Math.pow(2, this.selectedAlgorithm);
-    this.timeResult = this.allBits / this.speed;
-
     this.algoFormGroup = this._fb.group({
       algoCtrl: ['', Validators.required]
     });
     this.speedFormGroup = this._fb.group({
-      speedInput: ['', Validators.required]
+      speedInput: ['', Validators.required],
+      numberInput: ''
     });
+  }
+
+  ngDoCheck() {
+    this.speed = this.entrySpeed * this.selectedNumber; 
+    this.allBits = Math.pow(2, this.selectedAlgorithm);
+    this.second = this.allBits / this.speed;
+    this.day = Math.floor(this.second/(3600*24));
+    this.month = Math.floor(this.day/30);
+    this.year = Math.floor(this.day/365);
   }
 
   
