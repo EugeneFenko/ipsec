@@ -4,16 +4,72 @@
 		<mat-card-content>Under construction!</mat-card-content>
 	</div>
 
-	<!-- <mat-horizontal-stepper labelPosition="bottom">
-		<mat-step label="Phase 1">
+	<mat-horizontal-stepper labelPosition="bottom">
+		<mat-step label="ISAKMP">
+			<div class="phase__wrap">
+				<div class="phase__radio">
+					<div class="phase__block">
+						<h3>Policy number:</h3>	
+						<mat-form-field>
+							<input matInput placeholder="1-10000"  required>
+						</mat-form-field>
+					</div>
+					<div class="phase__block">
+						<h3>Set Hash:</h3>
+						<mat-radio-group class="radio__group" aria-label="Select a Hash type">
+							<mat-radio-button value="md5">MD5</mat-radio-button>
+							<mat-radio-button value="sha">SHA1</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div class="phase__block">
+						<h3>Set Encryption:</h3>
+						<div class="block__encryption">
+							<mat-radio-group aria-label="Select a Encryption type">
+								<mat-radio-button value="des">DES</mat-radio-button>
+								<mat-radio-button value="3des">3DES</mat-radio-button>
+								<mat-radio-button value="aes">AES</mat-radio-button>
+							</mat-radio-group>
+							<mat-radio-group aria-label="Select AES bit-lenght">
+								<mat-radio-button value="des">128</mat-radio-button>
+								<mat-radio-button value="3des">192</mat-radio-button>
+								<mat-radio-button value="aes">256</mat-radio-button>
+							</mat-radio-group>
+						</div>
+					</div>
+					<div class="phase__block">
+						<h3>Set Diffie-Hellman:</h3>
+						<mat-radio-group aria-label="Select Diffi-Hellman group">
+							<mat-radio-button value="1">1 Group</mat-radio-button>
+							<mat-radio-button value="2">2 Group</mat-radio-button>
+							<mat-radio-button value="5">5 Group</mat-radio-button>
+						</mat-radio-group>
+					</div>
+				</div>
+				<div class="phase__inputs">
+					<div class="phase__block">
+						<h3>Set Lifetime:</h3>
+						<mat-form-field>
+							<input matInput placeholder="60-86400" required>
+						</mat-form-field>
+					</div>
+					<div class="phase__block">
+						<h3>Set destination IP:</h3>
+						<mat-form-field>
+							<input matInput placeholder="192.168.0.1" required>
+						</mat-form-field>
+					</div>
+					<div class="phase__block">
+						<h3>Set Password:</h3>
+						<mat-form-field>
+							<input matInput placeholder="sTr0nG_P@s$WorD" required>
+						</mat-form-field>
+					</div>
+				</div>
 
-			<h3>Content 1</h3>
-
-			<mat-form-field>
-				<input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-			</mat-form-field>
+			</div>
+			
 		
-			<div>
+			<div class="step__nav-btn">
 				<button mat-button matStepperPrevious>Back</button>
 				<button mat-button matStepperNext>Next</button>
 			</div>
@@ -28,6 +84,7 @@
 			</div>
 		</mat-step>
 
+
 		<mat-step label="Result">
 			Result
 
@@ -36,5 +93,6 @@
 				<button mat-button matStepperNext>Next</button>
 			</div>
 		</mat-step>
-	</mat-horizontal-stepper> -->
+	
+	</mat-horizontal-stepper>
 </mat-card>

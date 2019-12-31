@@ -1,3 +1,43 @@
+.step__nav-btn {
+    text-align: center;
+}
+
 .title {
     text-align: center;
 }
+
+.phase__wrap {
+    display: flex;
+    flex-direction: column;
+
+    .phase__radio {
+        display: flex;
+        justify-content: space-evenly;
+        
+        .phase__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .phase__inputs {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+
+    mat-radio-button {
+        padding: 5px;
+    }
+}
+
+.block__encryption {
+    display: flex;
+}
+
