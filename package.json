@@ -25,8 +25,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gh-pages": "^2.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
-    "gulp-static-i18n-html": "^0.3.0"
+    "gulp-static-i18n-html": "^0.4.0"
   }
 }
